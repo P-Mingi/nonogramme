@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getPuzzleBySlug, getAllPuzzleSlugs } from '@/lib/puzzles';
+import { getDailyPuzzleSlug } from '@/lib/utils/daily';
 import { DailyPuzzleClient } from '@/components/game/DailyPuzzleClient';
 
 export async function generateStaticParams() {
@@ -33,7 +34,9 @@ export default async function PuzzlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const puzzle = await getPuzzleBySlug(slug);
+  const [puzzle, allSlugs] = await Promise.all([getPuzzleBySlug(slug), getAllPuzzleSlugs()]);
+  const isDaily = getDailyPuzzleSlug(new Date(), allSlugs) === slug;
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
       <Link href="/" style={{
@@ -46,7 +49,7 @@ export default async function PuzzlePage({
       }}>
         ← Tous les puzzles
       </Link>
-      <DailyPuzzleClient puzzle={puzzle} />
+      <DailyPuzzleClient puzzle={puzzle} isDaily={isDaily} />
     </div>
   );
 }

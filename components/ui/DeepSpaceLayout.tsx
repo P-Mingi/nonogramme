@@ -1,6 +1,11 @@
 import Link from 'next/link';
+import { createClient } from '@/lib/supabase/server';
+import { AuthButton } from '@/components/AuthButton';
 
-export function DeepSpaceLayout({ children }: { children: React.ReactNode }) {
+export async function DeepSpaceLayout({ children }: { children: React.ReactNode }) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
   return (
     <div
       className="min-h-screen flex flex-col"
@@ -13,9 +18,12 @@ export function DeepSpaceLayout({ children }: { children: React.ReactNode }) {
               NONOGRAMME
             </span>
           </Link>
-          <span className="text-sm" style={{ color: '#8892a4' }}>
-            Pixel art logic puzzle
-          </span>
+          <nav style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+            <Link href="/leaderboard" style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
+              Classement
+            </Link>
+            <AuthButton user={user} />
+          </nav>
         </div>
       </header>
       <main className="flex-1 max-w-4xl mx-auto w-full px-4 py-6">

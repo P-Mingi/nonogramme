@@ -8,7 +8,7 @@ import { GameHeader } from './GameHeader';
 
 interface NonogramBoardProps {
   puzzle: Puzzle;
-  onComplete: (score: number, time: number, errors: number) => void;
+  onComplete: (score: number, time: number, errors: number, hintsUsed: number) => void;
 }
 
 export function NonogramBoard({ puzzle, onComplete }: NonogramBoardProps) {
@@ -102,7 +102,7 @@ export function NonogramBoard({ puzzle, onComplete }: NonogramBoardProps) {
           puzzle.difficulty
         );
         // Defer to avoid state update during render
-        setTimeout(() => onComplete(score, secondsRef.current, errorsRef.current), 0);
+        setTimeout(() => onComplete(score, secondsRef.current, errorsRef.current, hintsUsedRef.current), 0);
       }
 
       return next;

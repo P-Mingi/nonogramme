@@ -6,6 +6,7 @@ interface WinScreenProps {
   score: number;
   timeSeconds: number;
   errors: number;
+  xpEarned?: number;
   onClose: () => void;
 }
 
@@ -15,7 +16,7 @@ function formatTime(s: number): string {
   return `${m}:${sec.toString().padStart(2, '0')}`;
 }
 
-export function WinScreen({ puzzleName, score, timeSeconds, errors, onClose }: WinScreenProps) {
+export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, onClose }: WinScreenProps) {
   const timeUntilNext = getTimeUntilNextPuzzle();
 
   function handleShare() {
@@ -69,6 +70,12 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, onClose }: W
             </div>
           )}
         </div>
+
+        {xpEarned !== undefined && (
+          <div className="text-sm font-semibold" style={{ color: '#f6c90e' }}>
+            +{xpEarned} XP
+          </div>
+        )}
 
         <p className="text-sm text-center" style={{ color: '#8892a4' }}>
           Prochain puzzle dans <span style={{ color: '#4ecdc4' }}>{timeUntilNext}</span>
