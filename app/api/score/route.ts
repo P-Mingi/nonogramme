@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   }
 
   const body = await request.json();
-  const { puzzle_slug, puzzle_name, time_seconds, errors, hints_used, score, is_daily } = body;
+  const { puzzle_slug, puzzle_name, time_seconds, errors, hints_used, score, is_daily, level_number } = body;
 
   // Save completion (upsert — one entry per puzzle per user)
   const { error: completionError } = await supabase.from('completions').upsert({
@@ -23,6 +23,7 @@ export async function POST(request: Request) {
     hints_used,
     score,
     is_daily,
+    level_number: level_number ?? null,
     completed_at: new Date().toISOString(),
   }, { onConflict: 'user_id,puzzle_slug' });
 

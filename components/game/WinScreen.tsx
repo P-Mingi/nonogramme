@@ -1,7 +1,9 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { getTimeUntilNextPuzzle } from '@/lib/utils/daily';
 import { Logo } from '@/components/ui/Logo';
 import { PixelReveal } from './PixelReveal';
+import type { LevelEntry } from '@/lib/levels';
 
 interface WinScreenProps {
   puzzleName: string;
@@ -11,6 +13,7 @@ interface WinScreenProps {
   xpEarned?: number;
   solution?: number[][];
   filledColor?: string;
+  nextLevel?: LevelEntry;
   onClose: () => void;
 }
 
@@ -20,7 +23,8 @@ function formatTime(s: number): string {
   return `${m}:${sec.toString().padStart(2, '0')}`;
 }
 
-export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, solution, filledColor, onClose }: WinScreenProps) {
+export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, solution, filledColor, nextLevel, onClose }: WinScreenProps) {
+  const router = useRouter();
   const timeUntilNext = getTimeUntilNextPuzzle();
 
   function handleShare() {
@@ -92,6 +96,16 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
           Prochain puzzle dans <span style={{ color: '#4ecdc4' }}>{timeUntilNext}</span>
         </p>
 
+        {nextLevel && !nextLevel.isPremium && (
+          <button
+            onClick={() => router.push(`/puzzle/${nextLevel.slug}?level=${nextLevel.number}`)}
+            className="w-full py-3 rounded-xl text-sm font-bold transition-all"
+            style={{ background: 'linear-gradient(135deg, #4ecdc4, #45b7d1)', color: '#070d17' }}
+          >
+            ▶ Niveau {nextLevel.number} — {nextLevel.name}
+          </button>
+        )}
+
         <div className="flex gap-3 w-full">
           <button
             onClick={handleShare}
@@ -103,9 +117,9 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
           <button
             onClick={onClose}
             className="flex-1 py-2.5 rounded-lg text-sm font-medium transition-all"
-            style={{ backgroundColor: '#4ecdc4', color: '#0d1528' }}
+            style={{ backgroundColor: nextLevel ? 'transparent' : '#4ecdc4', color: nextLevel ? '#8892a4' : '#0d1528', border: nextLevel ? '1px solid #2d3f5e' : 'none' }}
           >
-            Continuer
+            {nextLevel ? '← Accueil' : 'Continuer'}
           </button>
         </div>
       </div>

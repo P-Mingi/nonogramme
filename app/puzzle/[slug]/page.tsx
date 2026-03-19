@@ -35,10 +35,14 @@ export async function generateMetadata({
 
 export default async function PuzzlePage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ level?: string }>;
 }) {
-  const { slug } = await params;
+  const [{ slug }, { level }] = await Promise.all([params, searchParams]);
+  const levelNumber = level ? parseInt(level) : undefined;
+
   const [puzzle, allSlugs] = await Promise.all([getPuzzleBySlug(slug), getAllPuzzleSlugs()]);
   const isDaily = getDailyPuzzleSlug(new Date(), allSlugs) === slug;
 
@@ -52,9 +56,9 @@ export default async function PuzzlePage({
         alignItems: 'center',
         gap: '0.25rem',
       }}>
-        ← Tous les puzzles
+        {levelNumber ? '← Retour à la progression' : '← Tous les puzzles'}
       </Link>
-      <DailyPuzzleClient puzzle={puzzle} isDaily={isDaily} />
+      <DailyPuzzleClient puzzle={puzzle} isDaily={isDaily} levelNumber={levelNumber} />
     </div>
   );
 }
