@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily' as const,
       priority: 1,
     },
+    {
+      url: 'https://nonogramme.com/leaderboard',
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.6,
+    },
     ...puzzlePages,
   ];
 }

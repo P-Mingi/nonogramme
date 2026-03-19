@@ -28,7 +28,6 @@ export async function generateMetadata({
     openGraph: {
       title: `${puzzle.name} — Nonogramme ${puzzle.size}×${puzzle.size}`,
       description: `Puzzle de logique gratuit — ${puzzle.difficulty}`,
-      images: [{ url: '/og-image.svg', width: 1200, height: 630 }],
     },
     alternates: { canonical: `https://nonogramme.com/puzzle/${slug}` },
   };
