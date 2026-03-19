@@ -683,6 +683,12 @@
       "category": "animaux",
       "size": 5,
       "difficulty": "facile"
+    },
+    {
+      "slug": "lion-rugissant-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "moyen"
     }
   ]
 }
