@@ -18,13 +18,19 @@ export async function generateMetadata({
   const puzzle = await getPuzzleBySlug(slug);
 
   return {
-    title: `${puzzle.name} — Nonogramme ${puzzle.size}×${puzzle.size} | Nonogramme`,
-    description: `Jouez gratuitement au nonogramme "${puzzle.name}" (${puzzle.difficulty}, ${puzzle.size}×${puzzle.size}). ${puzzle.meta.og_description}`,
+    title: `${puzzle.name} — Nonogramme ${puzzle.size}×${puzzle.size}`,
+    description: `Jouez au nonogramme "${puzzle.name}" — ${puzzle.difficulty}, ${puzzle.size}×${puzzle.size}. Révèle l'image cachée gratuitement.`,
     keywords: [
       'nonogramme', 'picross', 'logimage', puzzle.name,
       `nonogramme ${puzzle.size}x${puzzle.size}`,
       ...puzzle.meta.tags,
     ],
+    openGraph: {
+      title: `${puzzle.name} — Nonogramme ${puzzle.size}×${puzzle.size}`,
+      description: `Puzzle de logique gratuit — ${puzzle.difficulty}`,
+      images: [{ url: '/og-image.svg', width: 1200, height: 630 }],
+    },
+    alternates: { canonical: `https://nonogramme.com/puzzle/${slug}` },
   };
 }
 

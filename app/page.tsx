@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getCatalog } from '@/lib/puzzles';
 import { getDailyPuzzleSlug, getTimeUntilNextPuzzle } from '@/lib/utils/daily';
+import { Logo } from '@/components/ui/Logo';
 
 const CATEGORY_LABELS: Record<string, string> = {
   animaux: 'Animaux',
@@ -43,6 +44,14 @@ export default function HomePage() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+
+      {/* Hero */}
+      <section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', paddingTop: '0.5rem' }}>
+        <Logo variant="icon" theme="dark" size="md" href="" />
+        <p style={{ color: '#7aa8cc', fontSize: '0.9rem', textAlign: 'center' }}>
+          Révèle des dessins cachés en résolvant des puzzles de logique
+        </p>
+      </section>
 
       {/* Daily puzzle banner */}
       <section>

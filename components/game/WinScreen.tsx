@@ -1,5 +1,6 @@
 'use client';
 import { getTimeUntilNextPuzzle } from '@/lib/utils/daily';
+import { Logo } from '@/components/ui/Logo';
 
 interface WinScreenProps {
   puzzleName: string;
@@ -36,9 +37,12 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, on
     >
       <div
         className="flex flex-col items-center gap-5 p-8 rounded-2xl max-w-sm w-full mx-4"
-        style={{ backgroundColor: '#1a2540', border: '1px solid #2d3f5e' }}
+        style={{ backgroundColor: '#1a2540', border: '1px solid #2d3f5e', position: 'relative' }}
         onClick={e => e.stopPropagation()}
       >
+        <div style={{ position: 'absolute', top: '0.75rem', right: '0.75rem', opacity: 0.6 }}>
+          <Logo variant="icon-mark" size="sm" href="" />
+        </div>
         <div className="text-5xl">⭐</div>
 
         <div className="text-center">

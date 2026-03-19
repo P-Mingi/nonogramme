@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
 import { AuthButton } from '@/components/AuthButton';
+import { Logo } from '@/components/ui/Logo';
 
 export async function DeepSpaceLayout({ children }: { children: React.ReactNode }) {
   const supabase = await createClient();
@@ -13,11 +14,7 @@ export async function DeepSpaceLayout({ children }: { children: React.ReactNode 
     >
       <header style={{ borderBottom: '1px solid #2d3f5e', backgroundColor: '#0d1528' }}>
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-          <Link href="/" style={{ textDecoration: 'none' }}>
-            <span className="font-bold text-xl tracking-widest" style={{ color: '#4ecdc4' }}>
-              NONOGRAMME
-            </span>
-          </Link>
+          <Logo variant="wordmark" theme="dark" size="sm" />
           <nav style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
             <Link href="/leaderboard" style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
               Classement

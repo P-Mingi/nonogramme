@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 52" width="380" height="52">
+  <!-- Icon mark -->
+  <rect x="0" y="0" width="52" height="52" rx="14" fill="#4ecdc4"/>
+  <rect x="8" y="8" width="16" height="16" rx="3" fill="#070d17"/>
+  <rect x="28" y="8" width="16" height="16" rx="3" fill="#ffffff" opacity="0.15"/>
+  <rect x="8" y="28" width="16" height="16" rx="3" fill="#ffffff" opacity="0.15"/>
+  <rect x="28" y="28" width="16" height="16" rx="3" fill="#070d17"/>
+  <!-- gold dot -->
+  <circle cx="48" cy="6" r="6" fill="#ffd93d"/>
+  <!-- wordmark -->
+  <text x="66" y="36" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5" fill="#e2f0ff">nonogramme</text>
+  <text x="66" y="36" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">
+    <tspan fill="#e2f0ff">nonogramme</tspan><tspan fill="#4ecdc4">.com</tspan>
+  </text>
+  <!-- underline accent -->
+  <rect x="66" y="42" width="32" height="3" rx="1.5" fill="#4ecdc4"/>
+  <rect x="102" y="42" width="3" height="3" rx="1.5" fill="#ffd93d"/>
+</svg>
