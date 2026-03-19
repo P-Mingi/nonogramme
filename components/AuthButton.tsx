@@ -35,14 +35,14 @@ async function signOut() {
   await supabase.auth.signOut();
 }
 
-export function AuthButton({ user }: { user: User | null }) {
+export function AuthButton({ user, displayName }: { user: User | null; displayName?: string | null }) {
   const router = useRouter();
 
   if (user) {
     return (
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
         <Link href="/profile" style={{ color: '#8892a4', fontSize: '0.8rem', textDecoration: 'none' }}>
-          {user.user_metadata?.user_name ?? user.email?.split('@')[0]}
+          {displayName ?? user.user_metadata?.user_name ?? user.email?.split('@')[0]}
         </Link>
         <button
           onClick={async () => { await signOut(); router.refresh(); }}

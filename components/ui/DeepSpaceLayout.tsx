@@ -7,6 +7,16 @@ export async function DeepSpaceLayout({ children }: { children: React.ReactNode 
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
+  let displayName: string | null = null;
+  if (user) {
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('username')
+      .eq('id', user.id)
+      .single();
+    displayName = profile?.username ?? null;
+  }
+
   return (
     <div
       className="min-h-screen flex flex-col"
@@ -19,7 +29,7 @@ export async function DeepSpaceLayout({ children }: { children: React.ReactNode 
             <Link href="/leaderboard" style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
               Classement
             </Link>
-            <AuthButton user={user} />
+            <AuthButton user={user} displayName={displayName} />
           </nav>
         </div>
       </header>
