@@ -29,6 +29,9 @@ export async function DeepSpaceLayout({ children }: { children: React.ReactNode 
             <Link href="/comment-jouer" style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
               Comment jouer
             </Link>
+            <Link href="/blog" style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
+              Blog
+            </Link>
             <Link href="/leaderboard" style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
               Classement
             </Link>

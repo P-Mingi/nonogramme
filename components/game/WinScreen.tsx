@@ -3,7 +3,9 @@ import { useRouter } from 'next/navigation';
 import { getTimeUntilNextPuzzle } from '@/lib/utils/daily';
 import { Logo } from '@/components/ui/Logo';
 import { PixelReveal } from './PixelReveal';
+import { ShareButton } from '@/components/ShareButton';
 import type { LevelEntry } from '@/lib/levels';
+import type { Puzzle } from '@/types/puzzle';
 
 interface WinScreenProps {
   puzzleName: string;
@@ -14,6 +16,8 @@ interface WinScreenProps {
   solution?: number[][];
   filledColor?: string;
   nextLevel?: LevelEntry;
+  puzzle?: Puzzle;
+  levelNumber?: number;
   onClose: () => void;
 }
 
@@ -23,18 +27,9 @@ function formatTime(s: number): string {
   return `${m}:${sec.toString().padStart(2, '0')}`;
 }
 
-export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, solution, filledColor, nextLevel, onClose }: WinScreenProps) {
+export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, solution, filledColor, nextLevel, puzzle, levelNumber, onClose }: WinScreenProps) {
   const router = useRouter();
   const timeUntilNext = getTimeUntilNextPuzzle();
-
-  function handleShare() {
-    const text = `J'ai résolu "${puzzleName}" sur Nonogramme.com !\nScore: ${score} pts — Temps: ${formatTime(timeSeconds)}${errors > 0 ? ` — ${errors} erreur${errors > 1 ? 's' : ''}` : ''}`;
-    if (navigator.share) {
-      navigator.share({ text }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(text).then(() => alert('Copié dans le presse-papier !')).catch(() => {});
-    }
-  }
 
   return (
     <div
@@ -96,6 +91,16 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
           Prochain puzzle dans <span style={{ color: '#4ecdc4' }}>{timeUntilNext}</span>
         </p>
 
+        {puzzle && (
+          <ShareButton
+            puzzle={puzzle}
+            levelNumber={levelNumber}
+            timeSeconds={timeSeconds}
+            score={score}
+            errors={errors}
+          />
+        )}
+
         {nextLevel && !nextLevel.isPremium && (
           <button
             onClick={() => router.push(`/puzzle/${nextLevel.slug}?level=${nextLevel.number}`)}
@@ -106,22 +111,13 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
           </button>
         )}
 
-        <div className="flex gap-3 w-full">
-          <button
-            onClick={handleShare}
-            className="flex-1 py-2.5 rounded-lg text-sm font-medium transition-all"
-            style={{ backgroundColor: '#0d1528', border: '1px solid #4ecdc4', color: '#4ecdc4' }}
-          >
-            Partager
-          </button>
-          <button
-            onClick={() => nextLevel ? router.push('/') : onClose()}
-            className="flex-1 py-2.5 rounded-lg text-sm font-medium transition-all"
-            style={{ backgroundColor: nextLevel ? 'transparent' : '#4ecdc4', color: nextLevel ? '#8892a4' : '#0d1528', border: nextLevel ? '1px solid #2d3f5e' : 'none' }}
-          >
-            {nextLevel ? '← Accueil' : 'Continuer'}
-          </button>
-        </div>
+        <button
+          onClick={() => nextLevel ? router.push('/') : onClose()}
+          className="w-full py-2.5 rounded-lg text-sm font-medium"
+          style={{ backgroundColor: nextLevel ? 'transparent' : '#4ecdc4', color: nextLevel ? '#8892a4' : '#0d1528', border: nextLevel ? '1px solid #2d3f5e' : 'none' }}
+        >
+          {nextLevel ? '← Accueil' : 'Continuer'}
+        </button>
       </div>
     </div>
   );

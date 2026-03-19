@@ -78,6 +78,8 @@ export function DailyPuzzleClient({ puzzle, isDaily = false, levelNumber }: Prop
           solution={puzzle.solution}
           filledColor={puzzle.colors?.filled}
           nextLevel={nextLevel}
+          puzzle={puzzle}
+          levelNumber={levelNumber}
           onClose={() => setWinData(null)}
         />
       )}

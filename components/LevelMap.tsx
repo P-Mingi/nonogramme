@@ -151,6 +151,23 @@ export function LevelMap({ levels, completedLevelIndices, isAuthenticated }: Lev
                       }} />
                     )}
 
+                    {/* 15×15 size badge */}
+                    {level.size === 15 && (
+                      <span style={{
+                        position: 'absolute',
+                        bottom: -3,
+                        right: -3,
+                        background: '#c084fc',
+                        borderRadius: 4,
+                        fontSize: 7,
+                        fontWeight: 800,
+                        color: 'white',
+                        padding: '1px 3px',
+                        lineHeight: 1,
+                        pointerEvents: 'none',
+                      }}>15</span>
+                    )}
+
                     {/* Play arrow badge */}
                     {isCurrent && (
                       <span style={{

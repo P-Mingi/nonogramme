@@ -33,7 +33,9 @@ function buildLevelOrder(puzzles: CatalogEntry[]): CatalogEntry[] {
     small_medium: puzzles.filter(p => p.size === 5  && p.difficulty === 'moyen'),
     large_medium: puzzles.filter(p => p.size === 10 && p.difficulty === 'moyen'),
     large_hard:   puzzles.filter(p => p.size === 10 && p.difficulty === 'difficile'),
-    expert:       puzzles.filter(p => p.difficulty === 'expert'),
+    expert:       puzzles.filter(p => p.size === 10 && p.difficulty === 'expert'),
+    xl_hard:      puzzles.filter(p => p.size === 15 && p.difficulty === 'difficile'),
+    xl_expert:    puzzles.filter(p => p.size === 15 && p.difficulty === 'expert'),
   };
 
   const ordered: CatalogEntry[] = [];
@@ -57,9 +59,13 @@ function buildLevelOrder(puzzles: CatalogEntry[]): CatalogEntry[] {
   const remaining_large_medium = buckets.large_medium.slice(buckets.small_medium.length);
   ordered.push(...remaining_large_medium);
 
-  // Hard + expert
+  // 10×10 hard + expert
   ordered.push(...buckets.large_hard);
   ordered.push(...buckets.expert);
+
+  // 15×15 hard + expert (advanced players)
+  ordered.push(...buckets.xl_hard);
+  ordered.push(...buckets.xl_expert);
 
   // Deduplicate (preserve first occurrence)
   const seen = new Set<string>();

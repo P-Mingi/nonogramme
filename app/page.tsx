@@ -24,6 +24,8 @@ const CATEGORY_COLORS: Record<string, string> = {
   objets: '#4d9de0',
   personnages: '#ff6b9d',
   special: '#f6c90e',
+  nourriture: '#ff6b6b',
+  symboles: '#45b7d1',
 };
 
 function nameFromSlug(slug: string): string {
@@ -53,24 +55,36 @@ export default async function HomePage() {
   let profile: { username: string | null; streak_current: number; xp: number; level: number } | null = null;
   let dailyCompletion: { score: number; time_seconds: number; xp_earned: number; errors: number } | null = null;
   let completedLevelIndices: number[] = [];
+  let dailyRank: { rank: number; total: number } | null = null;
 
   if (user) {
-    const [{ data: profileData }, { data: completionsData }] = await Promise.all([
+    const today = new Date().toISOString().slice(0, 10);
+    const [{ data: profileData }, { data: completionsData }, { data: dailyTimes }] = await Promise.all([
       supabase.from('profiles').select('username, streak_current, xp, level').eq('id', user.id).single(),
       supabase.from('completions')
         .select('puzzle_slug, score, time_seconds, xp_earned, errors, created_at, level_number')
         .eq('user_id', user.id),
+      supabase.from('completions')
+        .select('time_seconds')
+        .eq('puzzle_slug', dailySlug)
+        .gte('created_at', today),
     ]);
 
     if (profileData) profile = profileData;
 
     if (completionsData) {
       // Daily completed today?
-      const today = new Date().toISOString().slice(0, 10);
       const todayDaily = completionsData.find(c =>
         c.puzzle_slug === dailySlug && c.created_at.slice(0, 10) === today
       );
-      if (todayDaily) dailyCompletion = todayDaily;
+      if (todayDaily) {
+        dailyCompletion = todayDaily;
+        if (dailyTimes) {
+          const total = dailyTimes.length;
+          const rank = dailyTimes.filter(c => c.time_seconds < todayDaily.time_seconds).length + 1;
+          dailyRank = { rank, total };
+        }
+      }
 
       // Completed level indices (convert 1-indexed level_number to 0-indexed)
       completedLevelIndices = completionsData
@@ -152,11 +166,18 @@ export default async function HomePage() {
                 ✓ Complété
               </div>
             </div>
-            <div style={{ display: 'flex', gap: '1.5rem' }}>
+            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
               <Stat label="points" value={String(dailyCompletion.score)} />
               <Stat label="temps" value={formatTime(dailyCompletion.time_seconds)} />
-              {dailyCompletion.errors > 0 && <Stat label="erreurs" value={String(dailyCompletion.errors)} color="#ff6b6b" />}
+              <Stat label="erreurs" value={String(dailyCompletion.errors)} color={dailyCompletion.errors > 0 ? '#ff6b6b' : '#6bcb77'} />
               <Stat label="XP" value={`+${dailyCompletion.xp_earned}`} color="#f6c90e" />
+              {dailyRank && (
+                <Stat
+                  label="classement vitesse"
+                  value={`${dailyRank.rank === 1 ? '1er' : `${dailyRank.rank}e`} / ${dailyRank.total}`}
+                  color="#c77dff"
+                />
+              )}
             </div>
           </div>
         ) : (

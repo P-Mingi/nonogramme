@@ -23,13 +23,15 @@ const os = require('os');
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const CATEGORIES = ['animaux', 'nature', 'objets', 'personnages', 'special'];
+const CATEGORIES = ['animaux', 'nature', 'objets', 'personnages', 'special', 'nourriture', 'symboles'];
 const COLORS = {
   animaux:     '#4ecdc4',
   nature:      '#6bcb77',
   objets:      '#4d9de0',
   personnages: '#ff6b9d',
   special:     '#f6c90e',
+  nourriture:  '#ff6b6b',
+  symboles:    '#45b7d1',
 };
 const TWEMOJI_BASE = 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72';
 const CATALOG_PATH = path.join(__dirname, '../data/puzzles/index.json');
@@ -226,10 +228,22 @@ function guessDifficulty(fillRate, size) {
   return 'expert';
 }
 
+// ─── Confirm helper ───────────────────────────────────────────────────────────
+
+function confirm(question) {
+  return new Promise(resolve => {
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+    rl.question(question, answer => {
+      rl.close();
+      resolve(answer.trim().toLowerCase() === 'y');
+    });
+  });
+}
+
 // ─── Shared processing pipeline ──────────────────────────────────────────────
 
 async function processPuzzle(imagePath, opts) {
-  const { name, category, size, threshold, validate, difficulty: forcedDifficulty } = opts;
+  const { name, category, size, threshold, validate, yes, difficulty: forcedDifficulty } = opts;
 
   console.log(`\n📐 ${imagePath}  →  ${size}x${size}  (seuil: ${threshold})`);
 
@@ -244,11 +258,11 @@ async function processPuzzle(imagePath, opts) {
 
   if (totalFilled === 0) {
     console.error('❌ Image trop claire — aucun pixel rempli. Essaie --threshold=64.');
-    process.exit(1);
+    return false;
   }
   if (totalFilled === size * size) {
     console.error('❌ Image trop sombre — tous les pixels sont remplis. Essaie --threshold=192.');
-    process.exit(1);
+    return false;
   }
 
   if (validate) {
@@ -259,59 +273,56 @@ async function processPuzzle(imagePath, opts) {
     } else {
       console.log('❌ Plusieurs solutions — puzzle rejeté.');
       console.log('   → Essaie un seuil différent, ou --no-validate pour forcer.');
-      process.exit(1);
+      return false;
     }
   } else {
     console.log('⚠️  Vérification solution unique ignorée (--no-validate).');
   }
 
-  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-  rl.question('\nValider ce puzzle ? (y/n): ', answer => {
-    rl.close();
-    if (answer.toLowerCase() !== 'y') {
-      console.log('Puzzle rejeté.');
-      return;
-    }
+  if (!yes) {
+    const ok = await confirm('\nValider ce puzzle ? (y/n): ');
+    if (!ok) { console.log('Puzzle rejeté.'); return false; }
+  }
 
-    const slug       = slugify(name, size);
-    const difficulty = forcedDifficulty || guessDifficulty(parseFloat(fillRate), size);
+  const slug       = slugify(name, size);
+  const difficulty = forcedDifficulty || guessDifficulty(parseFloat(fillRate), size);
 
-    const catalog = loadCatalog();
-    if (catalog.puzzles.some(p => p.slug === slug)) {
-      console.error(`❌ Un puzzle avec le slug "${slug}" existe déjà.`);
-      console.error('   → Utilise un nom différent (--name="Renard v2").');
-      return;
-    }
+  const catalog = loadCatalog();
+  if (catalog.puzzles.some(p => p.slug === slug)) {
+    console.error(`❌ Un puzzle avec le slug "${slug}" existe déjà.`);
+    console.error('   → Utilise un nom différent (--name="Renard v2").');
+    return false;
+  }
 
-    const puzzle = {
-      id: slug,
-      slug,
-      name,
-      category,
-      size,
-      difficulty,
-      author: 'pipeline-v1',
-      solution,
-      clues,
-      colors: { filled: COLORS[category], background: '#0d1528' },
-      stats: {
-        total_filled: totalFilled,
-        difficulty_score: parseFloat((totalFilled / (size * size)).toFixed(2)),
-      },
-      meta: {
-        tags: [name.toLowerCase(), category],
-        og_description: `Révèle ${name} dans ce nonogramme ${size}x${size}`,
-      },
-    };
+  const puzzle = {
+    id: slug,
+    slug,
+    name,
+    category,
+    size,
+    difficulty,
+    author: 'pipeline-v1',
+    solution,
+    clues,
+    colors: { filled: COLORS[category], background: '#0d1528' },
+    stats: {
+      total_filled: totalFilled,
+      difficulty_score: parseFloat((totalFilled / (size * size)).toFixed(2)),
+    },
+    meta: {
+      tags: [name.toLowerCase(), category],
+      og_description: `Révèle ${name} dans ce nonogramme ${size}x${size}`,
+    },
+  };
 
-    const filePath = savePuzzle(puzzle);
-    console.log(`✅ Puzzle sauvegardé: ${filePath}`);
+  const filePath = savePuzzle(puzzle);
+  console.log(`✅ Puzzle sauvegardé: ${filePath}`);
 
-    catalog.puzzles.push({ slug, category, size, difficulty });
-    saveCatalog(catalog);
-    console.log(`📋 Catalog mis à jour (${catalog.puzzles.length} puzzles total)`);
-    console.log(`\nPour jouer: http://localhost:3015/puzzle/${slug}`);
-  });
+  catalog.puzzles.push({ slug, category, size, difficulty });
+  saveCatalog(catalog);
+  console.log(`📋 Catalog mis à jour (${catalog.puzzles.length} puzzles total)`);
+  console.log(`\nPour jouer: http://localhost:3015/puzzle/${slug}`);
+  return true;
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
@@ -328,11 +339,12 @@ Usage:
 
 Options:
   --name=<n>        Puzzle display name
-  --category=<c>    animaux | nature | objets | personnages | special  (default: animaux)
+  --category=<c>    animaux | nature | objets | personnages | special | nourriture | symboles  (default: animaux)
   --size=<n>        5 | 10 | 15 | 20  (default: 10)
   --threshold=<n>   Pixel darkness threshold 0-255  (default: 128)
   --difficulty=<d>  facile | moyen | difficile | expert  (default: auto)
   --no-validate     Skip unique-solution check
+  --yes             Auto-confirm (for batch runs)
 
 Examples:
   node scripts/pipeline.js emoji 🦊 --name="Renard" --category=animaux
@@ -360,6 +372,7 @@ Examples:
   const size      = parseInt(getName('size') || '10');
   const threshold = parseInt(getName('threshold') || '128');
   const validate  = !hasFlag('no-validate');
+  const yes       = hasFlag('yes');
   const forcedDifficulty = getName('difficulty') || null;
 
   if (!CATEGORIES.includes(category)) {
@@ -414,7 +427,7 @@ Examples:
     return n.charAt(0).toUpperCase() + n.slice(1);
   })();
 
-  await processPuzzle(imagePath, { name, category, size, threshold, validate, difficulty: forcedDifficulty });
+  await processPuzzle(imagePath, { name, category, size, threshold, validate, yes, difficulty: forcedDifficulty });
 }
 
 main().catch(err => {

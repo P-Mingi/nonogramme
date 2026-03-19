@@ -911,6 +911,18 @@
       "category": "special",
       "size": 10,
       "difficulty": "difficile"
+    },
+    {
+      "slug": "lion-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "raton-laveur-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "difficile"
     }
   ]
 }
