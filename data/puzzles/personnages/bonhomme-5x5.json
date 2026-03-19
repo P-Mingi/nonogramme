@@ -1,0 +1,101 @@
+{
+  "id": "bonhomme-5x5",
+  "slug": "bonhomme-5x5",
+  "name": "Bonhomme",
+  "category": "personnages",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "cols": [
+      [
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#ff6b9d",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 13,
+    "difficulty_score": 0.52
+  },
+  "meta": {
+    "tags": [
+      "bonhomme",
+      "personnages"
+    ],
+    "og_description": "Révèle Bonhomme dans ce nonogramme 5x5"
+  }
+}

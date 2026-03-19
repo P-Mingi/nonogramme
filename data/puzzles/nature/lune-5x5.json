@@ -1,0 +1,99 @@
+{
+  "id": "lune-5x5",
+  "slug": "lune-5x5",
+  "name": "Lune",
+  "category": "nature",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        2
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        2
+      ]
+    ],
+    "cols": [
+      [
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#6bcb77",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 9,
+    "difficulty_score": 0.36
+  },
+  "meta": {
+    "tags": [
+      "lune",
+      "nature"
+    ],
+    "og_description": "Révèle Lune dans ce nonogramme 5x5"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "lapin-5x5",
+  "slug": "lapin-5x5",
+  "name": "Lapin",
+  "category": "animaux",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1,
+        1
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ]
+    ],
+    "cols": [
+      [
+        1
+      ],
+      [
+        4
+      ],
+      [
+        4
+      ],
+      [
+        4
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 14,
+    "difficulty_score": 0.56
+  },
+  "meta": {
+    "tags": [
+      "lapin",
+      "animaux"
+    ],
+    "og_description": "Révèle Lapin dans ce nonogramme 5x5"
+  }
+}

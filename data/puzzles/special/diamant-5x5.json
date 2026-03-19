@@ -1,0 +1,97 @@
+{
+  "id": "diamant-5x5",
+  "slug": "diamant-5x5",
+  "name": "Diamant",
+  "category": "special",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ]
+    ],
+    "cols": [
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#f6c90e",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 13,
+    "difficulty_score": 0.52
+  },
+  "meta": {
+    "tags": [
+      "diamant",
+      "special"
+    ],
+    "og_description": "Révèle Diamant dans ce nonogramme 5x5"
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "puzzles": [
+    {
+      "slug": "chat-mignon-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "chien-assis-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "soleil-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "maison-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "coeur-5x5",
+      "category": "personnages",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "oiseau-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "poisson-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "papillon-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "grenouille-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "araignee-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "arbre-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "champignon-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "fleur-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "montagne-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "lune-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "cle-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "ampoule-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "tasse-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "cloche-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "cadenas-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "eclair-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "bonhomme-5x5",
+      "category": "personnages",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "chapeau-5x5",
+      "category": "personnages",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "couronne-5x5",
+      "category": "personnages",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "fantome-5x5",
+      "category": "personnages",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "croix-5x5",
+      "category": "special",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "fleche-5x5",
+      "category": "special",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "diamant-5x5",
+      "category": "special",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "pingouin-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "hibou-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "renard-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "baleine-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "panda-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "sapin-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "volcan-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "nuage-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "voiture-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "fusee-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "telephone-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "livre-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "trophee-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "robot-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "crane-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "superheros-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "astronaute-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "coeur-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "yin-yang-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "gamepad-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "lapin-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "loupe-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "cactus-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "feuille-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "avion-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "horloge-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "elephant-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    }
+  ]
+}

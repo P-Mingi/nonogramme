@@ -1,0 +1,32 @@
+{
+  "id": "coeur-5x5",
+  "slug": "coeur-5x5",
+  "name": "Coeur",
+  "category": "personnages",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "manual-v1",
+  "solution": [
+    [0,1,0,1,0],
+    [1,1,1,1,1],
+    [1,1,1,1,1],
+    [0,1,1,1,0],
+    [0,0,1,0,0]
+  ],
+  "clues": {
+    "rows": [[1,1],[5],[5],[3],[1]],
+    "cols": [[2],[4],[4],[4],[2]]
+  },
+  "colors": {
+    "filled": "#ff6b9d",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 16,
+    "difficulty_score": 0.64
+  },
+  "meta": {
+    "tags": ["coeur", "amour", "symbole"],
+    "og_description": "Révèle un coeur dans ce nonogramme 5x5"
+  }
+}

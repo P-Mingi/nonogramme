@@ -1,0 +1,101 @@
+{
+  "id": "loupe-5x5",
+  "slug": "loupe-5x5",
+  "name": "Loupe",
+  "category": "objets",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ]
+    ],
+    "cols": [
+      [
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        4
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4d9de0",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 11,
+    "difficulty_score": 0.44
+  },
+  "meta": {
+    "tags": [
+      "loupe",
+      "objets"
+    ],
+    "og_description": "Révèle Loupe dans ce nonogramme 5x5"
+  }
+}

@@ -1,0 +1,96 @@
+'use client';
+import { getTimeUntilNextPuzzle } from '@/lib/utils/daily';
+
+interface WinScreenProps {
+  puzzleName: string;
+  score: number;
+  timeSeconds: number;
+  errors: number;
+  onClose: () => void;
+}
+
+function formatTime(s: number): string {
+  const m = Math.floor(s / 60);
+  const sec = s % 60;
+  return `${m}:${sec.toString().padStart(2, '0')}`;
+}
+
+export function WinScreen({ puzzleName, score, timeSeconds, errors, onClose }: WinScreenProps) {
+  const timeUntilNext = getTimeUntilNextPuzzle();
+
+  function handleShare() {
+    const text = `J'ai résolu "${puzzleName}" sur Nonogramme.com !\nScore: ${score} pts — Temps: ${formatTime(timeSeconds)}${errors > 0 ? ` — ${errors} erreur${errors > 1 ? 's' : ''}` : ''}`;
+    if (navigator.share) {
+      navigator.share({ text }).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(text).then(() => alert('Copié dans le presse-papier !')).catch(() => {});
+    }
+  }
+
+  return (
+    <div
+      className="fixed inset-0 flex items-center justify-center z-50"
+      style={{ backgroundColor: 'rgba(13, 21, 40, 0.92)', backdropFilter: 'blur(4px)' }}
+      onClick={onClose}
+    >
+      <div
+        className="flex flex-col items-center gap-5 p-8 rounded-2xl max-w-sm w-full mx-4"
+        style={{ backgroundColor: '#1a2540', border: '1px solid #2d3f5e' }}
+        onClick={e => e.stopPropagation()}
+      >
+        <div className="text-5xl">⭐</div>
+
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-1" style={{ color: '#4ecdc4' }}>
+            Puzzle résolu !
+          </h2>
+          <p className="text-sm" style={{ color: '#8892a4' }}>{puzzleName}</p>
+        </div>
+
+        <div className="flex gap-6 text-center">
+          <div>
+            <div className="text-2xl font-bold font-mono" style={{ color: '#e2e8f0' }}>
+              {score}
+            </div>
+            <div className="text-xs" style={{ color: '#8892a4' }}>points</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold font-mono" style={{ color: '#e2e8f0' }}>
+              {formatTime(timeSeconds)}
+            </div>
+            <div className="text-xs" style={{ color: '#8892a4' }}>temps</div>
+          </div>
+          {errors > 0 && (
+            <div>
+              <div className="text-2xl font-bold font-mono" style={{ color: '#ff6b6b' }}>
+                {errors}
+              </div>
+              <div className="text-xs" style={{ color: '#8892a4' }}>erreurs</div>
+            </div>
+          )}
+        </div>
+
+        <p className="text-sm text-center" style={{ color: '#8892a4' }}>
+          Prochain puzzle dans <span style={{ color: '#4ecdc4' }}>{timeUntilNext}</span>
+        </p>
+
+        <div className="flex gap-3 w-full">
+          <button
+            onClick={handleShare}
+            className="flex-1 py-2.5 rounded-lg text-sm font-medium transition-all"
+            style={{ backgroundColor: '#0d1528', border: '1px solid #4ecdc4', color: '#4ecdc4' }}
+          >
+            Partager
+          </button>
+          <button
+            onClick={onClose}
+            className="flex-1 py-2.5 rounded-lg text-sm font-medium transition-all"
+            style={{ backgroundColor: '#4ecdc4', color: '#0d1528' }}
+          >
+            Continuer
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

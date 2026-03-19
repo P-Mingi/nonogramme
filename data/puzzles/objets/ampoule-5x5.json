@@ -1,0 +1,97 @@
+{
+  "id": "ampoule-5x5",
+  "slug": "ampoule-5x5",
+  "name": "Ampoule",
+  "category": "objets",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ]
+    ],
+    "cols": [
+      [
+        2
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        4
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4d9de0",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 17,
+    "difficulty_score": 0.68
+  },
+  "meta": {
+    "tags": [
+      "ampoule",
+      "objets"
+    ],
+    "og_description": "Révèle Ampoule dans ce nonogramme 5x5"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "papillon-5x5",
+  "slug": "papillon-5x5",
+  "name": "Papillon",
+  "category": "animaux",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "cols": [
+      [
+        2,
+        2
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 19,
+    "difficulty_score": 0.76
+  },
+  "meta": {
+    "tags": [
+      "papillon",
+      "animaux"
+    ],
+    "og_description": "Révèle Papillon dans ce nonogramme 5x5"
+  }
+}

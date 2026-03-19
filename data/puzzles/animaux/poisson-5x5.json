@@ -1,0 +1,97 @@
+{
+  "id": "poisson-5x5",
+  "slug": "poisson-5x5",
+  "name": "Poisson",
+  "category": "animaux",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        4
+      ],
+      [
+        1
+      ]
+    ],
+    "cols": [
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 15,
+    "difficulty_score": 0.6
+  },
+  "meta": {
+    "tags": [
+      "poisson",
+      "animaux"
+    ],
+    "og_description": "Révèle Poisson dans ce nonogramme 5x5"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "couronne-5x5",
+  "slug": "couronne-5x5",
+  "name": "Couronne",
+  "category": "personnages",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ]
+    ],
+    "cols": [
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        4
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#ff6b9d",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 19,
+    "difficulty_score": 0.76
+  },
+  "meta": {
+    "tags": [
+      "couronne",
+      "personnages"
+    ],
+    "og_description": "Révèle Couronne dans ce nonogramme 5x5"
+  }
+}

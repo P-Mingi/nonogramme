@@ -1,0 +1,105 @@
+{
+  "id": "araignee-5x5",
+  "slug": "araignee-5x5",
+  "name": "Araignee",
+  "category": "animaux",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cols": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 15,
+    "difficulty_score": 0.6
+  },
+  "meta": {
+    "tags": [
+      "araignee",
+      "animaux"
+    ],
+    "og_description": "Révèle Araignee dans ce nonogramme 5x5"
+  }
+}

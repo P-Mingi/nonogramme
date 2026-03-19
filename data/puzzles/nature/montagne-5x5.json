@@ -1,0 +1,97 @@
+{
+  "id": "montagne-5x5",
+  "slug": "montagne-5x5",
+  "name": "Montagne",
+  "category": "nature",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ]
+    ],
+    "cols": [
+      [
+        2
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        4
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#6bcb77",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 17,
+    "difficulty_score": 0.68
+  },
+  "meta": {
+    "tags": [
+      "montagne",
+      "nature"
+    ],
+    "og_description": "Révèle Montagne dans ce nonogramme 5x5"
+  }
+}

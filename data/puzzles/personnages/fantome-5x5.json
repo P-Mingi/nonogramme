@@ -1,0 +1,103 @@
+{
+  "id": "fantome-5x5",
+  "slug": "fantome-5x5",
+  "name": "Fantome",
+  "category": "personnages",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "cols": [
+      [
+        4
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        4
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#ff6b9d",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 19,
+    "difficulty_score": 0.76
+  },
+  "meta": {
+    "tags": [
+      "fantome",
+      "personnages"
+    ],
+    "og_description": "Révèle Fantome dans ce nonogramme 5x5"
+  }
+}

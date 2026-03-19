@@ -1,0 +1,32 @@
+{
+  "id": "soleil-5x5",
+  "slug": "soleil-5x5",
+  "name": "Soleil",
+  "category": "nature",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "manual-v1",
+  "solution": [
+    [0,1,0,1,0],
+    [0,0,1,0,0],
+    [1,1,1,1,1],
+    [0,0,1,0,0],
+    [0,1,0,1,0]
+  ],
+  "clues": {
+    "rows": [[1,1],[1],[5],[1],[1,1]],
+    "cols": [[1],[1,1,1],[3],[1,1,1],[1]]
+  },
+  "colors": {
+    "filled": "#f6c90e",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 11,
+    "difficulty_score": 0.44
+  },
+  "meta": {
+    "tags": ["soleil", "nature", "rayons"],
+    "og_description": "Révèle un soleil dans ce nonogramme 5x5"
+  }
+}

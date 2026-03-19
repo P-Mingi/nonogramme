@@ -1,0 +1,102 @@
+{
+  "id": "tasse-5x5",
+  "slug": "tasse-5x5",
+  "name": "Tasse",
+  "category": "objets",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "seed-v1",
+  "solution": [
+    [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        4
+      ]
+    ],
+    "cols": [
+      [
+        5
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4d9de0",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 15,
+    "difficulty_score": 0.6
+  },
+  "meta": {
+    "tags": [
+      "tasse",
+      "objets"
+    ],
+    "og_description": "Révèle Tasse dans ce nonogramme 5x5"
+  }
+}
