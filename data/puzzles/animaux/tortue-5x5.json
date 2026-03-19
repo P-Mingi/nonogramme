@@ -1,0 +1,99 @@
+{
+  "id": "tortue-5x5",
+  "slug": "tortue-5x5",
+  "name": "Tortue",
+  "category": "animaux",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cols": [
+      [
+        2
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 17,
+    "difficulty_score": 0.68
+  },
+  "meta": {
+    "tags": [
+      "tortue",
+      "animaux"
+    ],
+    "og_description": "Révèle Tortue dans ce nonogramme 5x5"
+  }
+}

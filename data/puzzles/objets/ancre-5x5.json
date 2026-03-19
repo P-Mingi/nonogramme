@@ -1,0 +1,102 @@
+{
+  "id": "ancre-5x5",
+  "slug": "ancre-5x5",
+  "name": "Ancre",
+  "category": "objets",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        5
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cols": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        4
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 12,
+    "difficulty_score": 0.48
+  },
+  "meta": {
+    "tags": [
+      "ancre",
+      "objets"
+    ],
+    "og_description": "Révèle Ancre dans ce nonogramme 5x5"
+  }
+}

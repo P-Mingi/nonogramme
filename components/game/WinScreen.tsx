@@ -1,6 +1,7 @@
 'use client';
 import { getTimeUntilNextPuzzle } from '@/lib/utils/daily';
 import { Logo } from '@/components/ui/Logo';
+import { PixelReveal } from './PixelReveal';
 
 interface WinScreenProps {
   puzzleName: string;
@@ -8,6 +9,8 @@ interface WinScreenProps {
   timeSeconds: number;
   errors: number;
   xpEarned?: number;
+  solution?: number[][];
+  filledColor?: string;
   onClose: () => void;
 }
 
@@ -17,7 +20,7 @@ function formatTime(s: number): string {
   return `${m}:${sec.toString().padStart(2, '0')}`;
 }
 
-export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, onClose }: WinScreenProps) {
+export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, solution, filledColor, onClose }: WinScreenProps) {
   const timeUntilNext = getTimeUntilNextPuzzle();
 
   function handleShare() {
@@ -43,7 +46,11 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, on
         <div style={{ position: 'absolute', top: '0.75rem', right: '0.75rem', opacity: 0.6 }}>
           <Logo variant="icon-mark" size="sm" href="" />
         </div>
-        <div className="text-5xl">⭐</div>
+        {solution ? (
+          <PixelReveal solution={solution} color={filledColor} size={160} />
+        ) : (
+          <div className="text-5xl">⭐</div>
+        )}
 
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-1" style={{ color: '#4ecdc4' }}>

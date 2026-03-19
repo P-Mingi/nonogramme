@@ -1,0 +1,99 @@
+{
+  "id": "hibou-mini-5x5",
+  "slug": "hibou-mini-5x5",
+  "name": "Hibou mini",
+  "category": "animaux",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cols": [
+      [
+        2
+      ],
+      [
+        4
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 15,
+    "difficulty_score": 0.6
+  },
+  "meta": {
+    "tags": [
+      "hibou-mini",
+      "animaux"
+    ],
+    "og_description": "Révèle Hibou mini dans ce nonogramme 5x5"
+  }
+}

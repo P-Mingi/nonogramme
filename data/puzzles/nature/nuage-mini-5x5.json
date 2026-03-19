@@ -1,0 +1,97 @@
+{
+  "id": "nuage-mini-5x5",
+  "slug": "nuage-mini-5x5",
+  "name": "Nuage mini",
+  "category": "nature",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "cols": [
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        3
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 13,
+    "difficulty_score": 0.52
+  },
+  "meta": {
+    "tags": [
+      "nuage-mini",
+      "nature"
+    ],
+    "og_description": "Révèle Nuage mini dans ce nonogramme 5x5"
+  }
+}

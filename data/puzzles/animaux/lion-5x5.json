@@ -1,0 +1,97 @@
+{
+  "id": "lion-5x5",
+  "slug": "lion-5x5",
+  "name": "Lion",
+  "category": "animaux",
+  "size": 5,
+  "difficulty": "moyen",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "cols": [
+      [
+        1
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 13,
+    "difficulty_score": 0.52
+  },
+  "meta": {
+    "tags": [
+      "lion",
+      "animaux"
+    ],
+    "og_description": "Révèle Lion dans ce nonogramme 5x5"
+  }
+}

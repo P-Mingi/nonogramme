@@ -52,6 +52,8 @@ export function DailyPuzzleClient({ puzzle, isDaily = false }: { puzzle: Puzzle;
           timeSeconds={winData.time}
           errors={winData.errors}
           xpEarned={winData.xpEarned}
+          solution={puzzle.solution}
+          filledColor={puzzle.colors?.filled}
           onClose={() => setWinData(null)}
         />
       )}

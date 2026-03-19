@@ -1,0 +1,105 @@
+{
+  "id": "sablier-5x5",
+  "slug": "sablier-5x5",
+  "name": "Sablier",
+  "category": "objets",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        5
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        5
+      ]
+    ],
+    "cols": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 15,
+    "difficulty_score": 0.6
+  },
+  "meta": {
+    "tags": [
+      "sablier",
+      "objets"
+    ],
+    "og_description": "Révèle Sablier dans ce nonogramme 5x5"
+  }
+}

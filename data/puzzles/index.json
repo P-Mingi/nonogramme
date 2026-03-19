@@ -329,6 +329,360 @@
       "category": "animaux",
       "size": 10,
       "difficulty": "facile"
+    },
+    {
+      "slug": "lion-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "tortue-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "souris-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "canard-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "serpent-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "hibou-mini-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "etoile-5x5",
+      "category": "special",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "sablier-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "ancre-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "drapeau-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "nuage-mini-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "tigre-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "dauphin-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "tortue-10-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "etoile-mer-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "cerf-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "chateau-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "guitare-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "couronne-10-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "bateau-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "alien-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "phare-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "montgolfiere-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "bonbon-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "sorciere-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "loup-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "escargot-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "pieuvre-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "bouclier-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "eglise-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "pont-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "lampe-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "pirate-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "licorne-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "crabe-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "fleur-10-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "arc-en-ciel-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "palmier-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "zombie-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "fee-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "vaisseau-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "epee-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "viking-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "ninja-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "pigeon-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "kangourou-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "koala-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "singe-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "tornado-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "cristal-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "cheval-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "requin-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "trident-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "parchemin-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "diamant-10-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "galaxie-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "meduse-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "renard-mini-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "loup-mini-5x5",
+      "category": "animaux",
+      "size": 5,
+      "difficulty": "facile"
     }
   ]
 }
