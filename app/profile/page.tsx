@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server';
 import { getLevelFromXP, LEVELS } from '@/lib/utils/xp';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
+import { ProfileEditForm } from '@/components/ProfileEditForm';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -94,6 +95,9 @@ export default async function ProfilePage() {
           </div>
         </div>
       </div>
+
+      {/* Edit form */}
+      <ProfileEditForm currentUsername={username} currentAvatarUrl={avatarUrl ?? null} />
 
       {/* XP bar */}
       <div style={{
