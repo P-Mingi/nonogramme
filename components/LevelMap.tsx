@@ -19,13 +19,16 @@ export function LevelMap({ levels, completedLevelIndices, isAuthenticated }: Lev
   const [completed, setCompleted] = useState<number[]>(completedLevelIndices);
 
   useEffect(() => {
-    if (!isAuthenticated) {
-      try {
-        const stored: number[] = JSON.parse(localStorage.getItem('completedLevels') || '[]');
-        setCompleted(stored);
-      } catch {}
-    }
-  }, [isAuthenticated]);
+    try {
+      const stored: number[] = JSON.parse(localStorage.getItem('completedLevels') || '[]');
+      if (stored.length > 0) {
+        setCompleted(prev => {
+          const merged = Array.from(new Set([...prev, ...stored]));
+          return merged.length !== prev.length ? merged : prev;
+        });
+      }
+    } catch {}
+  }, []);
 
   // Auto-scroll current level into view
   useEffect(() => {

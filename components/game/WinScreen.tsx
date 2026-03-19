@@ -115,7 +115,7 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
             Partager
           </button>
           <button
-            onClick={onClose}
+            onClick={() => nextLevel ? router.push('/') : onClose()}
             className="flex-1 py-2.5 rounded-lg text-sm font-medium transition-all"
             style={{ backgroundColor: nextLevel ? 'transparent' : '#4ecdc4', color: nextLevel ? '#8892a4' : '#0d1528', border: nextLevel ? '1px solid #2d3f5e' : 'none' }}
           >
