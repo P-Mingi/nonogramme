@@ -3,6 +3,7 @@
 import { createClient } from '@/lib/supabase/client';
 import { type User } from '@supabase/supabase-js';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const GOOGLE_ICON = (
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -40,9 +41,9 @@ export function AuthButton({ user }: { user: User | null }) {
   if (user) {
     return (
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-        <span style={{ color: '#8892a4', fontSize: '0.8rem' }}>
+        <Link href="/profile" style={{ color: '#8892a4', fontSize: '0.8rem', textDecoration: 'none' }}>
           {user.user_metadata?.user_name ?? user.email?.split('@')[0]}
-        </span>
+        </Link>
         <button
           onClick={async () => { await signOut(); router.refresh(); }}
           style={{
