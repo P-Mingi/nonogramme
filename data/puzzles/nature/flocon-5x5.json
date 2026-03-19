@@ -1,0 +1,105 @@
+{
+  "id": "flocon-5x5",
+  "slug": "flocon-5x5",
+  "name": "Flocon",
+  "category": "nature",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "cols": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 17,
+    "difficulty_score": 0.68
+  },
+  "meta": {
+    "tags": [
+      "flocon",
+      "nature"
+    ],
+    "og_description": "Révèle Flocon dans ce nonogramme 5x5"
+  }
+}

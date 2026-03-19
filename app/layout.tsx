@@ -69,9 +69,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: 'https://nonogramme.com',
-  },
+  // No global canonical — each page sets its own via generateMetadata or page metadata
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

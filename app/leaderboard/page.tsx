@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Classement — Nonogramme.com',
   description: 'Classement des meilleurs joueurs de nonogramme.',
+  alternates: { canonical: 'https://nonogramme.com/leaderboard' },
 };
 
 export const revalidate = 60; // refresh every minute

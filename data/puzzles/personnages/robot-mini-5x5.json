@@ -1,0 +1,102 @@
+{
+  "id": "robot-mini-5x5",
+  "slug": "robot-mini-5x5",
+  "name": "Robot mini",
+  "category": "personnages",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        3
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cols": [
+      [
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 16,
+    "difficulty_score": 0.64
+  },
+  "meta": {
+    "tags": [
+      "robot-mini",
+      "personnages"
+    ],
+    "og_description": "Révèle Robot mini dans ce nonogramme 5x5"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "couronne-mini-5x5",
+  "slug": "couronne-mini-5x5",
+  "name": "Couronne mini",
+  "category": "personnages",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ]
+    ],
+    "cols": [
+      [
+        5
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 23,
+    "difficulty_score": 0.92
+  },
+  "meta": {
+    "tags": [
+      "couronne-mini",
+      "personnages"
+    ],
+    "og_description": "Révèle Couronne mini dans ce nonogramme 5x5"
+  }
+}

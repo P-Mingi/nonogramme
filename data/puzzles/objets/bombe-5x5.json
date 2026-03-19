@@ -1,0 +1,97 @@
+{
+  "id": "bombe-5x5",
+  "slug": "bombe-5x5",
+  "name": "Bombe",
+  "category": "objets",
+  "size": 5,
+  "difficulty": "facile",
+  "author": "pipeline-v1",
+  "solution": [
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "clues": {
+    "rows": [
+      [
+        3
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        3
+      ],
+      [
+        1
+      ]
+    ],
+    "cols": [
+      [
+        2
+      ],
+      [
+        4
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  "colors": {
+    "filled": "#4ecdc4",
+    "background": "#0d1528"
+  },
+  "stats": {
+    "total_filled": 17,
+    "difficulty_score": 0.68
+  },
+  "meta": {
+    "tags": [
+      "bombe",
+      "objets"
+    ],
+    "og_description": "Révèle Bombe dans ce nonogramme 5x5"
+  }
+}

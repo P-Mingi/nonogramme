@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { type LevelEntry, getUserCurrentLevel } from '@/lib/levels';
+import { SignUpBanner } from '@/components/SignUpBanner';
 
 interface LevelMapProps {
   levels: LevelEntry[];
@@ -196,6 +197,9 @@ export function LevelMap({ levels, completedLevelIndices, isAuthenticated }: Lev
           })}
         </div>
       </div>
+
+      {/* Sign-up incentive for non-auth users */}
+      {!isAuthenticated && <SignUpBanner completedCount={completed.length} />}
 
       {/* CTA button */}
       <button

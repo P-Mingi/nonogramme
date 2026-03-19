@@ -689,6 +689,228 @@
       "category": "animaux",
       "size": 5,
       "difficulty": "moyen"
+    },
+    {
+      "slug": "fusee-mini-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "coeur-brise-5x5",
+      "category": "special",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "sapin-mini-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "fleur-mini-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "bombe-5x5",
+      "category": "objets",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "couronne-mini-5x5",
+      "category": "personnages",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "robot-mini-5x5",
+      "category": "personnages",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "feu-5x5",
+      "category": "special",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "flocon-5x5",
+      "category": "nature",
+      "size": 5,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "renard-10-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "morse-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "ours-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "dinosaure-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "papillon-10-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "ancre-10-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "cadeau-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "jumelles-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "champignon-10-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "comete-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "planete-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "chevalier-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "archer-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "tente-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "courrier-10-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "etoile-10-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "crayon-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "arc-10x10",
+      "category": "objets",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "scorpion-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "grenouille-10-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "colibri-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "coureur-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "sorcier-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "forgeron-10x10",
+      "category": "personnages",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "cascade-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "foret-10x10",
+      "category": "nature",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "couronne-or-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "spirale-10x10",
+      "category": "special",
+      "size": 10,
+      "difficulty": "difficile"
     }
   ]
 }

@@ -26,6 +26,9 @@ export async function DeepSpaceLayout({ children }: { children: React.ReactNode 
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
           <Logo variant="wordmark" theme="dark" size="sm" />
           <nav style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+            <Link href="/comment-jouer" style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
+              Comment jouer
+            </Link>
             <Link href="/leaderboard" style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
               Classement
             </Link>

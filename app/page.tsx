@@ -1,5 +1,10 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getCatalog } from '@/lib/puzzles';
+
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://nonogramme.com' },
+};
 import { getDailyPuzzleSlug, getTimeUntilNextPuzzle } from '@/lib/utils/daily';
 import { Logo } from '@/components/ui/Logo';
 import { createClient } from '@/lib/supabase/server';
