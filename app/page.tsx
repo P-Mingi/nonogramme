@@ -10,6 +10,7 @@ import { Logo } from '@/components/ui/Logo';
 import { createClient } from '@/lib/supabase/server';
 import { LEVELS } from '@/lib/levels';
 import { LevelMap } from '@/components/LevelMap';
+import { PushSubscription } from '@/components/PushSubscription';
 
 const DIFFICULTY_COLORS: Record<string, string> = {
   facile: '#6bcb77',
@@ -208,6 +209,13 @@ export default async function HomePage() {
           </Link>
         )}
       </section>
+
+      {/* Push reminder for logged-in users */}
+      {user && profile && profile.streak_current >= 1 && (
+        <section style={{ display: 'flex', justifyContent: 'center' }}>
+          <PushSubscription />
+        </section>
+      )}
 
       {/* Level map */}
       <section>

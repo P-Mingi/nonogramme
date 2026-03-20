@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from 'next';
+import { headers } from 'next/headers';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { DeepSpaceLayout } from '@/components/ui/DeepSpaceLayout';
+import type { Locale } from '@/i18n/config';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -69,12 +72,16 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // No global canonical — each page sets its own via generateMetadata or page metadata
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const headersList = await headers();
+  const locale = (headersList.get('x-locale') || 'fr') as Locale;
+
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body>
         <script
           type="application/ld+json"
@@ -94,7 +101,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
-        <DeepSpaceLayout>{children}</DeepSpaceLayout>
+        <DeepSpaceLayout locale={locale}>{children}</DeepSpaceLayout>
+        {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
       </body>
     </html>
   );

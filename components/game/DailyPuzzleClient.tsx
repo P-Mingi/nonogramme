@@ -4,6 +4,7 @@ import { NonogramBoard } from './NonogramBoard';
 import { WinScreen } from './WinScreen';
 import type { Puzzle } from '@/types/puzzle';
 import { LEVELS } from '@/lib/levels';
+import type { Locale } from '@/i18n/config';
 
 interface WinData {
   score: number;
@@ -17,9 +18,10 @@ interface Props {
   puzzle: Puzzle;
   isDaily?: boolean;
   levelNumber?: number; // 1-indexed level number, if coming from level map
+  locale?: Locale;
 }
 
-export function DailyPuzzleClient({ puzzle, isDaily = false, levelNumber }: Props) {
+export function DailyPuzzleClient({ puzzle, isDaily = false, levelNumber, locale = 'fr' }: Props) {
   const [winData, setWinData] = useState<WinData | null>(null);
 
   // Pre-compute next level (levelNumber is 1-indexed, LEVELS is 0-indexed)
@@ -80,6 +82,7 @@ export function DailyPuzzleClient({ puzzle, isDaily = false, levelNumber }: Prop
           nextLevel={nextLevel}
           puzzle={puzzle}
           levelNumber={levelNumber}
+          locale={locale}
           onClose={() => setWinData(null)}
         />
       )}

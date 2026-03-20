@@ -1,0 +1,58 @@
+import type { Translations } from './fr';
+
+export const ja: Translations = {
+  nav: {
+    leaderboard: 'ランキング',
+    logout: 'ログアウト',
+    login: 'ログイン',
+    blog: 'ブログ',
+    howToPlay: '遊び方',
+  },
+  home: {
+    tagline: 'ロジックパズルを解いて隠された絵を発見しよう',
+    dailyTitle: '今日のパズル',
+    nextPuzzle: '次のパズルまで',
+    myProgress: '進捗',
+    levels: 'レベル',
+    play: 'プレイ',
+    streak: '連続',
+    level: 'レベル',
+    completed: '完了',
+    xp: 'XP',
+  },
+  game: {
+    fill: '塗りつぶす',
+    mark: 'マーク',
+    erase: '消す',
+    hint: 'ヒント',
+    errors: 'エラー',
+    progress: '進捗',
+    allPuzzles: '全パズル',
+    backToProgress: '進捗に戻る',
+  },
+  win: {
+    title: 'パズル完成！',
+    points: 'ポイント',
+    time: 'タイム',
+    errors: 'エラー',
+    nextLevel: 'レベル',
+    share: '結果をシェア',
+    home: 'ホーム',
+    noErrors: 'ミスなし ✨',
+    nextDailyIn: '次のパズルまで',
+    continue: '続ける',
+  },
+  difficulty: {
+    facile: '簡単',
+    moyen: '普通',
+    difficile: '難しい',
+    expert: 'エキスパート',
+  },
+  seo: {
+    siteTitle: 'Nonogramme.com — 無料ロジックパズル',
+    siteDescription: '日本生まれのロジックパズルで隠れた絵を発見しよう。無料のノノグラム・ピクロスをオンラインでプレイ。',
+    puzzleTitle: (name: string, size: number) => `${name} — 無料${size}×${size}ノノグラム`,
+    puzzleDescription: (name: string, difficulty: string, size: number) =>
+      `無料でノノグラム「${name}」(${difficulty}、${size}×${size})をプレイ。隠れた絵を発見しよう！`,
+  },
+};

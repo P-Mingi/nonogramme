@@ -1,0 +1,58 @@
+export const fr = {
+  nav: {
+    leaderboard: 'Classement',
+    logout: 'Déconnexion',
+    login: 'Connexion',
+    blog: 'Blog',
+    howToPlay: 'Comment jouer',
+  },
+  home: {
+    tagline: 'Révèle des dessins cachés en résolvant des puzzles de logique',
+    dailyTitle: 'Puzzle du jour',
+    nextPuzzle: 'Prochain puzzle dans',
+    myProgress: 'Ma progression',
+    levels: 'niveaux',
+    play: 'Jouer',
+    streak: 'Série',
+    level: 'Niveau',
+    completed: 'Complété',
+    xp: 'XP',
+  },
+  game: {
+    fill: 'Remplir',
+    mark: 'Marquer',
+    erase: 'Effacer',
+    hint: 'Indice',
+    errors: 'erreurs',
+    progress: 'Progression',
+    allPuzzles: 'Tous les puzzles',
+    backToProgress: 'Retour à la progression',
+  },
+  win: {
+    title: 'Puzzle résolu !',
+    points: 'points',
+    time: 'temps',
+    errors: 'erreurs',
+    nextLevel: 'Niveau',
+    share: 'Partager mon résultat',
+    home: 'Accueil',
+    noErrors: 'Sans erreur ✨',
+    nextDailyIn: 'Prochain puzzle dans',
+    continue: 'Continuer',
+  },
+  difficulty: {
+    facile: 'Facile',
+    moyen: 'Moyen',
+    difficile: 'Difficile',
+    expert: 'Expert',
+  },
+  seo: {
+    siteTitle: 'Nonogramme.com — Jeux de logique gratuits',
+    siteDescription: 'Révèle des dessins cachés en résolvant des puzzles de logique japonais. Nonogrammes, picross et logimages gratuits en ligne.',
+    puzzleTitle: (name: string, size: number) => `${name} — Nonogramme ${size}×${size} gratuit`,
+    puzzleDescription: (name: string, difficulty: string, size: number) =>
+      `Jouez gratuitement au nonogramme "${name}" (${difficulty}, ${size}×${size}). Révèle l'image cachée !`,
+  },
+};
+
+export type Translations = typeof fr;

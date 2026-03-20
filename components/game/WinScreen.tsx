@@ -4,6 +4,8 @@ import { getTimeUntilNextPuzzle } from '@/lib/utils/daily';
 import { Logo } from '@/components/ui/Logo';
 import { PixelReveal } from './PixelReveal';
 import { ShareButton } from '@/components/ShareButton';
+import { getTranslations } from '@/i18n';
+import type { Locale } from '@/i18n/config';
 import type { LevelEntry } from '@/lib/levels';
 import type { Puzzle } from '@/types/puzzle';
 
@@ -18,6 +20,7 @@ interface WinScreenProps {
   nextLevel?: LevelEntry;
   puzzle?: Puzzle;
   levelNumber?: number;
+  locale?: Locale;
   onClose: () => void;
 }
 
@@ -27,9 +30,11 @@ function formatTime(s: number): string {
   return `${m}:${sec.toString().padStart(2, '0')}`;
 }
 
-export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, solution, filledColor, nextLevel, puzzle, levelNumber, onClose }: WinScreenProps) {
+export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, solution, filledColor, nextLevel, puzzle, levelNumber, locale = 'fr', onClose }: WinScreenProps) {
   const router = useRouter();
+  const t = getTranslations(locale);
   const timeUntilNext = getTimeUntilNextPuzzle();
+  const prefix = locale === 'fr' ? '' : `/${locale}`;
 
   return (
     <div
@@ -53,7 +58,7 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
 
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-1" style={{ color: '#4ecdc4' }}>
-            Puzzle résolu !
+            {t.win.title}
           </h2>
           <p className="text-sm" style={{ color: '#8892a4' }}>{puzzleName}</p>
         </div>
@@ -63,20 +68,20 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
             <div className="text-2xl font-bold font-mono" style={{ color: '#e2e8f0' }}>
               {score}
             </div>
-            <div className="text-xs" style={{ color: '#8892a4' }}>points</div>
+            <div className="text-xs" style={{ color: '#8892a4' }}>{t.win.points}</div>
           </div>
           <div>
             <div className="text-2xl font-bold font-mono" style={{ color: '#e2e8f0' }}>
               {formatTime(timeSeconds)}
             </div>
-            <div className="text-xs" style={{ color: '#8892a4' }}>temps</div>
+            <div className="text-xs" style={{ color: '#8892a4' }}>{t.win.time}</div>
           </div>
           {errors > 0 && (
             <div>
               <div className="text-2xl font-bold font-mono" style={{ color: '#ff6b6b' }}>
                 {errors}
               </div>
-              <div className="text-xs" style={{ color: '#8892a4' }}>erreurs</div>
+              <div className="text-xs" style={{ color: '#8892a4' }}>{t.win.errors}</div>
             </div>
           )}
         </div>
@@ -88,7 +93,7 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
         )}
 
         <p className="text-sm text-center" style={{ color: '#8892a4' }}>
-          Prochain puzzle dans <span style={{ color: '#4ecdc4' }}>{timeUntilNext}</span>
+          {t.win.nextDailyIn} <span style={{ color: '#4ecdc4' }}>{timeUntilNext}</span>
         </p>
 
         {puzzle && (
@@ -103,20 +108,20 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
 
         {nextLevel && !nextLevel.isPremium && (
           <button
-            onClick={() => router.push(`/puzzle/${nextLevel.slug}?level=${nextLevel.number}`)}
+            onClick={() => router.push(`${prefix}/puzzle/${nextLevel.slug}?level=${nextLevel.number}`)}
             className="w-full py-3 rounded-xl text-sm font-bold transition-all"
             style={{ background: 'linear-gradient(135deg, #4ecdc4, #45b7d1)', color: '#070d17' }}
           >
-            ▶ Niveau {nextLevel.number} — {nextLevel.name}
+            ▶ {t.win.nextLevel} {nextLevel.number} — {nextLevel.name}
           </button>
         )}
 
         <button
-          onClick={() => nextLevel ? router.push('/') : onClose()}
+          onClick={() => nextLevel ? router.push(`${prefix}/`) : onClose()}
           className="w-full py-2.5 rounded-lg text-sm font-medium"
           style={{ backgroundColor: nextLevel ? 'transparent' : '#4ecdc4', color: nextLevel ? '#8892a4' : '#0d1528', border: nextLevel ? '1px solid #2d3f5e' : 'none' }}
         >
-          {nextLevel ? '← Accueil' : 'Continuer'}
+          {nextLevel ? `← ${t.win.home}` : t.win.continue}
         </button>
       </div>
     </div>

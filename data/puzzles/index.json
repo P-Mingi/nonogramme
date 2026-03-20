@@ -923,6 +923,786 @@
       "category": "animaux",
       "size": 10,
       "difficulty": "difficile"
+    },
+    {
+      "slug": "renard-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "loup-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "lion-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "tigre-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "ours-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "panda-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "koala-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "raton-laveur-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "loutre-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "paresseux-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "grenouille-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "crocodile-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "lezard-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "tortue-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "diplodocus-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "t-rex-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "dauphin-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "baleine-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "requin-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "calmar-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "poisson-lune-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "papillon-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "abeille-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "grillon-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "moustique-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "microbe-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "coq-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "paon-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "perroquet-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "flamant-rose-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "hibou-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "aigle-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "chat-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "chien-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "lapin-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "hamster-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "souris-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "cochon-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "vache-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "cheval-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "renard-petit-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "grenouille-petite-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "volcan-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "montagne-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "vague-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "tornade-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "flocon-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "arc-en-ciel-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "etoile-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "lune-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "soleil-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "fleur-de-cerisier-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "hibiscus-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "tournesol-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "trefle-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "palmier-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "cactus-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "champignon-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "ble-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "maison-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "chateau-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "tente-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "voiture-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "fusee-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "avion-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "voilier-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "train-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "guitare-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "piano-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "trompette-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "violon-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "telescope-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "microscope-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "ampoule-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "aimant-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "pizza-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "burger-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "taco-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "ramen-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "sushi-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "donut-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "gateau-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "glace-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "raisins-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "fraise-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "peche-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "avocat-15x15",
+      "category": "nourriture",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "lion-royal-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "grand-papillon-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "grand-aigle-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "dauphin-saut-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "grand-volcan-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "grande-fusee-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "cirque-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "grand-chateau-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "masque-15x15",
+      "category": "personnages",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "dragon-15x15",
+      "category": "animaux",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "planete-terre-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "carte-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "epees-croisees-15x15",
+      "category": "objets",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "grand-sorcier-15x15",
+      "category": "personnages",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "etoile-filante-15x15",
+      "category": "nature",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "etoile-jaune-15x15",
+      "category": "symboles",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "yin-yang-15x15",
+      "category": "symboles",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "trident-15x15",
+      "category": "symboles",
+      "size": 15,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "eclair-15x15",
+      "category": "symboles",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "cible-15x15",
+      "category": "symboles",
+      "size": 15,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "infini-15x15",
+      "category": "symboles",
+      "size": 15,
+      "difficulty": "expert"
+    },
+    {
+      "slug": "loutre-10x10",
+      "category": "animaux",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "sapin-noel",
+      "category": "noel",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "pere-noel",
+      "category": "noel",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "etoile-noel",
+      "category": "noel",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "bonhomme-neige",
+      "category": "noel",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "cadeau-noel",
+      "category": "noel",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "cloche-noel",
+      "category": "noel",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "flocon-neige",
+      "category": "noel",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "bougie-noel",
+      "category": "noel",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "citrouille-halloween",
+      "category": "halloween",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "fantome-halloween",
+      "category": "halloween",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "chauve-souris-halloween",
+      "category": "halloween",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "araignee-halloween",
+      "category": "halloween",
+      "size": 10,
+      "difficulty": "difficile"
+    },
+    {
+      "slug": "lune-halloween",
+      "category": "halloween",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "chapeau-sorciere",
+      "category": "halloween",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "oeuf-paques",
+      "category": "paques",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "lapin-paques",
+      "category": "paques",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "poussin-paques",
+      "category": "paques",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "panier-paques",
+      "category": "paques",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "coeur-valentin",
+      "category": "saint_valentin",
+      "size": 10,
+      "difficulty": "facile"
+    },
+    {
+      "slug": "rose-valentin",
+      "category": "saint_valentin",
+      "size": 10,
+      "difficulty": "moyen"
+    },
+    {
+      "slug": "double-coeur-valentin",
+      "category": "saint_valentin",
+      "size": 10,
+      "difficulty": "moyen"
     }
   ]
 }

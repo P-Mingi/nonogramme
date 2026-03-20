@@ -1,0 +1,58 @@
+import type { Translations } from './fr';
+
+export const en: Translations = {
+  nav: {
+    leaderboard: 'Leaderboard',
+    logout: 'Logout',
+    login: 'Login',
+    blog: 'Blog',
+    howToPlay: 'How to play',
+  },
+  home: {
+    tagline: 'Reveal hidden drawings by solving logic puzzles',
+    dailyTitle: 'Puzzle of the day',
+    nextPuzzle: 'Next puzzle in',
+    myProgress: 'My progress',
+    levels: 'levels',
+    play: 'Play',
+    streak: 'Streak',
+    level: 'Level',
+    completed: 'Completed',
+    xp: 'XP',
+  },
+  game: {
+    fill: 'Fill',
+    mark: 'Mark',
+    erase: 'Erase',
+    hint: 'Hint',
+    errors: 'errors',
+    progress: 'Progress',
+    allPuzzles: 'All puzzles',
+    backToProgress: 'Back to progress',
+  },
+  win: {
+    title: 'Puzzle solved!',
+    points: 'points',
+    time: 'time',
+    errors: 'errors',
+    nextLevel: 'Level',
+    share: 'Share my result',
+    home: 'Home',
+    noErrors: 'No errors ✨',
+    nextDailyIn: 'Next puzzle in',
+    continue: 'Continue',
+  },
+  difficulty: {
+    facile: 'Easy',
+    moyen: 'Medium',
+    difficile: 'Hard',
+    expert: 'Expert',
+  },
+  seo: {
+    siteTitle: 'Nonogram.com — Free Logic Puzzles',
+    siteDescription: 'Reveal hidden pixel art by solving Japanese logic puzzles. Free nonograms, picross and griddlers online.',
+    puzzleTitle: (name: string, size: number) => `${name} — Free ${size}×${size} Nonogram`,
+    puzzleDescription: (name: string, difficulty: string, size: number) =>
+      `Play the free nonogram "${name}" (${difficulty}, ${size}×${size}). Reveal the hidden image!`,
+  },
+};

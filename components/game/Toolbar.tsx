@@ -1,36 +1,40 @@
 'use client';
 import type { Tool } from '@/types/puzzle';
+import { getTranslations } from '@/i18n';
+import type { Locale } from '@/i18n/config';
 
 interface ToolbarProps {
   tool: Tool;
   onToolChange: (t: Tool) => void;
   hints: number;
   onHint: () => void;
+  locale?: Locale;
 }
 
-const TOOLS: { id: Tool; label: string; icon: string }[] = [
-  { id: 'fill', label: 'Remplir', icon: '■' },
-  { id: 'mark', label: 'Marquer', icon: '✕' },
-  { id: 'erase', label: 'Effacer', icon: '⌫' },
-];
+export function Toolbar({ tool, onToolChange, hints, onHint, locale = 'fr' }: ToolbarProps) {
+  const t = getTranslations(locale);
+  const TOOLS: { id: Tool; label: string; icon: string }[] = [
+    { id: 'fill', label: t.game.fill, icon: '■' },
+    { id: 'mark', label: t.game.mark, icon: '✕' },
+    { id: 'erase', label: t.game.erase, icon: '⌫' },
+  ];
 
-export function Toolbar({ tool, onToolChange, hints, onHint }: ToolbarProps) {
   return (
     <div className="flex items-center gap-2 flex-wrap justify-center">
-      {TOOLS.map(t => (
+      {TOOLS.map(tt => (
         <button
-          key={t.id}
-          aria-pressed={tool === t.id}
-          onClick={() => onToolChange(t.id)}
+          key={tt.id}
+          aria-pressed={tool === tt.id}
+          onClick={() => onToolChange(tt.id)}
           className="flex items-center gap-1.5 px-3 py-2 rounded text-sm font-medium transition-all"
           style={{
-            backgroundColor: tool === t.id ? '#1a2540' : 'transparent',
-            color: tool === t.id ? '#4ecdc4' : '#8892a4',
-            border: `1px solid ${tool === t.id ? '#4ecdc4' : '#2d3f5e'}`,
+            backgroundColor: tool === tt.id ? '#1a2540' : 'transparent',
+            color: tool === tt.id ? '#4ecdc4' : '#8892a4',
+            border: `1px solid ${tool === tt.id ? '#4ecdc4' : '#2d3f5e'}`,
           }}
         >
-          <span>{t.icon}</span>
-          <span>{t.label}</span>
+          <span>{tt.icon}</span>
+          <span>{tt.label}</span>
         </button>
       ))}
 
@@ -48,7 +52,7 @@ export function Toolbar({ tool, onToolChange, hints, onHint }: ToolbarProps) {
         }}
       >
         <span>?</span>
-        <span>Indice ({hints})</span>
+        <span>{t.game.hint} ({hints})</span>
       </button>
     </div>
   );

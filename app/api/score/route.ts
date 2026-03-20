@@ -70,5 +70,27 @@ export async function POST(request: Request) {
     puzzles_completed: profile.puzzles_completed + 1,
   }).eq('id', user.id);
 
+  // Reward creator if this is a community puzzle (not self-play)
+  const { data: communityPuzzle } = await supabase
+    .from('puzzles')
+    .select('created_by, play_count')
+    .eq('slug', puzzle_slug)
+    .eq('is_community', true)
+    .single();
+
+  if (communityPuzzle?.created_by && communityPuzzle.created_by !== user.id) {
+    const { data: creatorProfile } = await supabase
+      .from('profiles')
+      .select('xp')
+      .eq('id', communityPuzzle.created_by)
+      .single();
+    if (creatorProfile) {
+      await Promise.all([
+        supabase.from('profiles').update({ xp: creatorProfile.xp + 10 }).eq('id', communityPuzzle.created_by),
+        supabase.from('puzzles').update({ play_count: (communityPuzzle.play_count ?? 0) + 1 }).eq('slug', puzzle_slug),
+      ]);
+    }
+  }
+
   return NextResponse.json({ xp_earned: xpEarned, new_xp: newXP, new_level: newLevel, streak: newStreak });
 }
