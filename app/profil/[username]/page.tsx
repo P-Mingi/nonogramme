@@ -10,7 +10,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { username } = await params;
   return {
-    title: `${username} — Profil Nonogramme.com`,
+    title: `${username} - Profil Nonogramme.com`,
     description: `Découvrez les nonogrammes créés par ${username} sur Nonogramme.com.`,
   };
 }

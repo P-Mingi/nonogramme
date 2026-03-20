@@ -19,6 +19,14 @@ export const ja: Translations = {
     level: 'レベル',
     completed: '完了',
     xp: 'XP',
+    greeting: 'こんにちは',
+    points: 'ポイント',
+    time: 'タイム',
+    errors: 'エラー',
+    speedRanking: '速度ランキング',
+    levelShort: 'Lv.',
+    playLevel: 'レベルをプレイ',
+    rankOrdinal: (n: number) => `${n}位`,
   },
   game: {
     fill: '塗りつぶす',
@@ -49,9 +57,9 @@ export const ja: Translations = {
     expert: 'エキスパート',
   },
   seo: {
-    siteTitle: 'Nonogramme.com — 無料ロジックパズル',
+    siteTitle: 'Nonogramme.com - 無料ロジックパズル',
     siteDescription: '日本生まれのロジックパズルで隠れた絵を発見しよう。無料のノノグラム・ピクロスをオンラインでプレイ。',
-    puzzleTitle: (name: string, size: number) => `${name} — 無料${size}×${size}ノノグラム`,
+    puzzleTitle: (name: string, size: number) => `${name} - 無料${size}×${size}ノノグラム`,
     puzzleDescription: (name: string, difficulty: string, size: number) =>
       `無料でノノグラム「${name}」(${difficulty}、${size}×${size})をプレイ。隠れた絵を発見しよう！`,
   },

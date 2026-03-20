@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Comment jouer au nonogramme — Guide complet débutant | Nonogramme.com',
+  title: 'Comment jouer au nonogramme - Guide complet débutant | Nonogramme.com',
   description: 'Apprenez les règles du nonogramme (picross, logimage) en 5 minutes. Guide illustré avec exemples pour comprendre les indices et résoudre votre première grille.',
   alternates: { canonical: 'https://nonogramme.com/blog/comment-jouer-nonogramme' },
   openGraph: {
-    title: 'Comment jouer au nonogramme — Guide débutant',
+    title: 'Comment jouer au nonogramme - Guide débutant',
     description: 'Apprenez les règles du nonogramme en 5 minutes avec des exemples illustrés.',
   },
 };
@@ -53,7 +53,7 @@ export default function Page() {
   return (
     <article>
       <p style={s.em}>Guide · 5 min de lecture</p>
-      <h1 style={s.h1}>Comment jouer au nonogramme — guide complet pour débutants</h1>
+      <h1 style={s.h1}>Comment jouer au nonogramme - guide complet pour débutants</h1>
       <p style={{ ...s.p, color: '#8892a4' }}>Publié le 20 mars 2026</p>
 
       <p style={s.p}>
@@ -122,7 +122,7 @@ export default function Page() {
       <p style={s.p}>
         La ligne 3 a l&apos;indice <strong style={{ color: '#ffd93d' }}>5</strong> et la grille fait 5 colonnes : toutes les cases sont donc
         remplies. C&apos;est toujours par les contraintes les plus fortes qu&apos;on commence. Ensuite, la colonne
-        du milieu (colonne 3) a l&apos;indice 5 — elle aussi est entièrement remplie. On peut alors déduire les
+        du milieu (colonne 3) a l&apos;indice 5 - elle aussi est entièrement remplie. On peut alors déduire les
         autres cases par recoupement.
       </p>
 
@@ -162,13 +162,13 @@ export default function Page() {
         Notre interface propose trois outils : <strong style={{ color: '#e2e8f0' }}>Remplir</strong> (cliquez pour noircir une case),
         <strong style={{ color: '#e2e8f0' }}> Marquer</strong> (placez un × pour indiquer qu&apos;une case est vide) et
         <strong style={{ color: '#e2e8f0' }}> Effacer</strong> (corrigez une erreur). Vous pouvez aussi maintenir le bouton de
-        la souris enfoncé et glisser pour remplir ou marquer plusieurs cases d&apos;un coup — particulièrement
+        la souris enfoncé et glisser pour remplir ou marquer plusieurs cases d&apos;un coup - particulièrement
         pratique sur les grandes grilles.
       </p>
 
       <p style={s.p}>
         Si vous êtes bloqué, l&apos;outil <strong style={{ color: '#e2e8f0' }}>Indice</strong> révèle une case correcte au
-        hasard — à utiliser avec parcimonie pour préserver le plaisir de la découverte.
+        hasard - à utiliser avec parcimonie pour préserver le plaisir de la découverte.
       </p>
 
       <h2 style={s.h2}>Prêt à jouer ?</h2>
@@ -176,11 +176,11 @@ export default function Page() {
       <p style={s.p}>
         Les puzzles 5×5 sont idéaux pour débuter : ils se résolvent en 2 à 5 minutes et permettent de
         comprendre les mécanismes sans se perdre. Passez ensuite aux grilles 10×10 pour plus de challenge.
-        Chaque puzzle résolu révèle un dessin pixel art — des animaux, des objets, des scènes du quotidien.
+        Chaque puzzle résolu révèle un dessin pixel art - des animaux, des objets, des scènes du quotidien.
       </p>
 
       <Link href="/" style={s.cta}>
-        Commencer à jouer — c&apos;est gratuit →
+        Commencer à jouer - c&apos;est gratuit →
       </Link>
     </article>
   );

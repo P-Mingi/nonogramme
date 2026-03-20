@@ -19,6 +19,14 @@ export const es: Translations = {
     level: 'Nivel',
     completed: 'Completado',
     xp: 'XP',
+    greeting: 'Hola',
+    points: 'puntos',
+    time: 'tiempo',
+    errors: 'errores',
+    speedRanking: 'clasificación velocidad',
+    levelShort: 'Niv.',
+    playLevel: 'Jugar nivel',
+    rankOrdinal: (n: number) => `#${n}`,
   },
   game: {
     fill: 'Rellenar',
@@ -49,9 +57,9 @@ export const es: Translations = {
     expert: 'Experto',
   },
   seo: {
-    siteTitle: 'Nonogramme.com — Puzzles de Lógica Gratis',
+    siteTitle: 'Nonogramme.com - Puzzles de Lógica Gratis',
     siteDescription: 'Revela dibujos en píxeles resolviendo puzzles de lógica japoneses. Nonogramas, picross y griddlers gratis online.',
-    puzzleTitle: (name: string, size: number) => `${name} — Nonograma ${size}×${size} gratis`,
+    puzzleTitle: (name: string, size: number) => `${name} - Nonograma ${size}×${size} gratis`,
     puzzleDescription: (name: string, difficulty: string, size: number) =>
       `Juega gratis al nonograma "${name}" (${difficulty}, ${size}×${size}). ¡Revela la imagen oculta!`,
   },

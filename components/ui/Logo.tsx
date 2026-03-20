@@ -44,7 +44,7 @@ export function Logo({
   if (!href) return img
 
   return (
-    <Link href={href} aria-label="Nonogramme.com — Accueil">
+    <Link href={href} aria-label="Nonogramme.com - Accueil">
       {img}
     </Link>
   )

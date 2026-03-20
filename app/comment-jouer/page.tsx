@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Comment jouer au Nonogramme — Règles et tutoriel',
+  title: 'Comment jouer au Nonogramme - Règles et tutoriel',
   description: 'Apprends à jouer au nonogramme (picross, logimage) en quelques minutes. Règles simples, exemple illustré et conseils pour débutants.',
   keywords: [
     'comment jouer nonogramme', 'règles nonogramme', 'règles picross',
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: 'https://nonogramme.com/comment-jouer' },
   openGraph: {
-    title: 'Comment jouer au Nonogramme — Règles et tutoriel',
+    title: 'Comment jouer au Nonogramme - Règles et tutoriel',
     description: 'Règles du nonogramme expliquées simplement avec un exemple illustré.',
     url: 'https://nonogramme.com/comment-jouer',
   },
@@ -51,7 +51,7 @@ export default function HowToPlayPage() {
         <p style={{ color: '#8892a4', fontSize: '0.95rem', lineHeight: 1.7 }}>
           Le <strong style={{ color: '#e2e8f0' }}>nonogramme</strong> (aussi appelé <strong style={{ color: '#e2e8f0' }}>picross</strong>, logimage ou hanjie)
           est un puzzle de logique japonais. Le but : colorier les bonnes cases d'une grille pour révéler un dessin caché.
-          Aucun hasard — que de la logique pure.
+          Aucun hasard - que de la logique pure.
         </p>
       </header>
 
@@ -79,10 +79,10 @@ export default function HowToPlayPage() {
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginTop: '0.75rem' }}>
           <ActionRow color="#4ecdc4" label="Remplir" icon="■">
-            Case <strong style={{ color: '#4ecdc4' }}>remplie</strong> — fait partie du dessin
+            Case <strong style={{ color: '#4ecdc4' }}>remplie</strong> - fait partie du dessin
           </ActionRow>
           <ActionRow color="#ff6b6b" label="Marquer ✕" icon="✕">
-            Case <strong style={{ color: '#ff6b6b' }}>vide</strong> — sert de repère pour ne pas se tromper
+            Case <strong style={{ color: '#ff6b6b' }}>vide</strong> - sert de repère pour ne pas se tromper
           </ActionRow>
         </div>
       </section>
@@ -117,10 +117,10 @@ export default function HowToPlayPage() {
         <H2>4. Conseils pour débuter</H2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
           {[
-            { title: 'Commence par les plus grands groupes', text: 'Un groupe de 5 dans une grille de 5 remplit toute la ligne — c\'est un cadeau !' },
+            { title: 'Commence par les plus grands groupes', text: 'Un groupe de 5 dans une grille de 5 remplit toute la ligne - c\'est un cadeau !' },
             { title: 'Utilise le recoupement', text: 'Si un groupe de 4 doit tenir dans 5 cases, la case du milieu est forcément remplie.' },
             { title: 'Place des croix', text: 'Marquer les cases vides (✕) évite de remplir une case que tu as déjà exclue par logique.' },
-            { title: 'Travaille ligne par ligne et colonne par colonne', text: 'Alterne entre lignes et colonnes — chaque information nouvelle aide à progresser sur l\'autre axe.' },
+            { title: 'Travaille ligne par ligne et colonne par colonne', text: 'Alterne entre lignes et colonnes - chaque information nouvelle aide à progresser sur l\'autre axe.' },
           ].map(tip => (
             <div key={tip.title} style={{
               backgroundColor: '#1a2540', border: '1px solid #2d3f5e',

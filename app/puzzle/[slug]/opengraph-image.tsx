@@ -88,7 +88,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           </div>
 
           <div style={{ fontSize: 24, color: '#8892a4' }}>
-            Révèle l'image cachée — puzzle gratuit
+            Révèle l'image cachée - puzzle gratuit
           </div>
         </div>
 

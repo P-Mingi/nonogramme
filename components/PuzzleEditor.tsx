@@ -58,7 +58,7 @@ export function PuzzleEditor({ userId, profile }: Props) {
       const { valid, reason, rowClues: rc, colClues: cc } = e.data;
       if (valid) {
         setValidation('valid');
-        setValidationMessage('✅ Puzzle valide — solution unique confirmée !');
+        setValidationMessage('✅ Puzzle valide - solution unique confirmée !');
         setRowClues(rc);
         setColClues(cc);
       } else {
@@ -160,7 +160,7 @@ export function PuzzleEditor({ userId, profile }: Props) {
       }
       router.push(`/puzzle/${data.slug}?created=true`);
     } catch {
-      setSubmitError('Erreur réseau — réessaie');
+      setSubmitError('Erreur réseau - réessaie');
       setIsSubmitting(false);
     }
   };
@@ -190,7 +190,7 @@ export function PuzzleEditor({ userId, profile }: Props) {
         gap: '2rem',
         alignItems: 'start',
       }}>
-        {/* Left — Editor */}
+        {/* Left - Editor */}
         <div>
           {/* Toolbar */}
           <div style={{ marginBottom: '1rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -314,7 +314,7 @@ export function PuzzleEditor({ userId, profile }: Props) {
           </div>
         </div>
 
-        {/* Right — Settings + publish */}
+        {/* Right - Settings + publish */}
         <div>
           {/* Name */}
           <div style={{ marginBottom: '1rem' }}>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Les meilleurs jeux de nonogramme en ligne gratuits (2026) | Nonogramme.com',
-  description: 'Comparatif des meilleures plateformes pour jouer au nonogramme gratuitement en 2026. Interface, catalogue, mobile, progression — on compare tout.',
+  description: 'Comparatif des meilleures plateformes pour jouer au nonogramme gratuitement en 2026. Interface, catalogue, mobile, progression - on compare tout.',
   alternates: { canonical: 'https://nonogramme.com/blog/meilleurs-jeux-nonogramme-en-ligne' },
   openGraph: {
     title: 'Top sites nonogramme en ligne 2026',
@@ -70,19 +70,19 @@ export default function Page() {
       </p>
 
       <ul style={{ color: '#c8d8e8', lineHeight: 2, paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-        <li><strong style={{ color: '#e2e8f0' }}>Qualité des puzzles</strong> — solutions uniques, grilles bien conçues</li>
-        <li><strong style={{ color: '#e2e8f0' }}>Interface utilisateur</strong> — ergonomie sur desktop et mobile</li>
-        <li><strong style={{ color: '#e2e8f0' }}>Difficulté progressive</strong> — adaptation aux débutants et experts</li>
-        <li><strong style={{ color: '#e2e8f0' }}>Langue française</strong> — interface et puzzles en français</li>
-        <li><strong style={{ color: '#e2e8f0' }}>Gratuité</strong> — accès sans abonnement à la majorité du contenu</li>
-        <li><strong style={{ color: '#e2e8f0' }}>Puzzle du jour</strong> — pour revenir chaque jour</li>
+        <li><strong style={{ color: '#e2e8f0' }}>Qualité des puzzles</strong> - solutions uniques, grilles bien conçues</li>
+        <li><strong style={{ color: '#e2e8f0' }}>Interface utilisateur</strong> - ergonomie sur desktop et mobile</li>
+        <li><strong style={{ color: '#e2e8f0' }}>Difficulté progressive</strong> - adaptation aux débutants et experts</li>
+        <li><strong style={{ color: '#e2e8f0' }}>Langue française</strong> - interface et puzzles en français</li>
+        <li><strong style={{ color: '#e2e8f0' }}>Gratuité</strong> - accès sans abonnement à la majorité du contenu</li>
+        <li><strong style={{ color: '#e2e8f0' }}>Puzzle du jour</strong> - pour revenir chaque jour</li>
       </ul>
 
       <h2 style={s.h2}>Les plateformes en détail</h2>
 
       <div style={s.card}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          <h3 style={{ ...s.cardTitle, color: '#4ecdc4' }}>🏆 Nonogramme.com — Meilleur site français</h3>
+          <h3 style={{ ...s.cardTitle, color: '#4ecdc4' }}>🏆 Nonogramme.com - Meilleur site français</h3>
         </div>
         <p style={{ ...s.p, marginBottom: '0.5rem' }}>
           La plateforme est conçue spécifiquement pour le public francophone, avec une interface épurée
@@ -172,12 +172,12 @@ export default function Page() {
       </p>
 
       <p style={s.p}>
-        Le puzzle du jour est une excellente façon d&apos;intégrer le nonogramme à sa routine quotidienne —
+        Le puzzle du jour est une excellente façon d&apos;intégrer le nonogramme à sa routine quotidienne -
         5 à 15 minutes d&apos;exercice cérébral ludique, chaque matin avant le café.
       </p>
 
       <Link href="/" style={s.cta}>
-        Essayer Nonogramme.com — c&apos;est gratuit →
+        Essayer Nonogramme.com - c&apos;est gratuit →
       </Link>
     </article>
   );

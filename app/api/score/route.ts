@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   const body = await request.json();
   const { puzzle_slug, puzzle_name, time_seconds, errors, hints_used, score, is_daily, level_number } = body;
 
-  // Save completion (upsert — one entry per puzzle per user)
+  // Save completion (upsert - one entry per puzzle per user)
   const { error: completionError } = await supabase.from('completions').upsert({
     user_id: user.id,
     puzzle_slug,
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
 
   let newStreak = profile.streak_current;
   if (lastDate === today) {
-    // Already played today — no streak change
+    // Already played today - no streak change
   } else if (lastDate === yesterday) {
     newStreak = profile.streak_current + 1;
   } else {

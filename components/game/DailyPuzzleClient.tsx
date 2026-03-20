@@ -42,7 +42,7 @@ export function DailyPuzzleClient({ puzzle, isDaily = false, levelNumber, locale
       } catch {}
     }
 
-    // Fire-and-forget — save to Supabase if logged in
+    // Fire-and-forget - save to Supabase if logged in
     try {
       const res = await fetch('/api/score', {
         method: 'POST',

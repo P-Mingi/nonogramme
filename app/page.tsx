@@ -1,16 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { headers } from 'next/headers';
 import { getCatalog } from '@/lib/puzzles';
-
-export const metadata: Metadata = {
-  alternates: { canonical: 'https://nonogramme.com' },
-};
 import { getDailyPuzzleSlug, getTimeUntilNextPuzzle } from '@/lib/utils/daily';
 import { Logo } from '@/components/ui/Logo';
 import { createClient } from '@/lib/supabase/server';
 import { LEVELS } from '@/lib/levels';
 import { LevelMap } from '@/components/LevelMap';
 import { PushSubscription } from '@/components/PushSubscription';
+import { getTranslations } from '@/i18n';
+import type { Locale } from '@/i18n/config';
+
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://nonogramme.com' },
+};
 
 const DIFFICULTY_COLORS: Record<string, string> = {
   facile: '#6bcb77',
@@ -44,12 +47,15 @@ function formatTime(s: number): string {
 }
 
 export default async function HomePage() {
+  const headersList = await headers();
+  const locale = (headersList.get('x-locale') || 'fr') as Locale;
+  const t = getTranslations(locale);
+
   const catalog = getCatalog();
   const slugs = catalog.map(p => p.slug);
   const dailySlug = getDailyPuzzleSlug(new Date(), slugs);
   const daily = catalog.find(p => p.slug === dailySlug)!;
 
-  // Fetch user data
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
@@ -74,9 +80,9 @@ export default async function HomePage() {
     if (profileData) profile = profileData;
 
     if (completionsData) {
-      // Daily completed today?
+      const today2 = new Date().toISOString().slice(0, 10);
       const todayDaily = completionsData.find(c =>
-        c.puzzle_slug === dailySlug && c.created_at.slice(0, 10) === today
+        c.puzzle_slug === dailySlug && c.created_at.slice(0, 10) === today2
       );
       if (todayDaily) {
         dailyCompletion = todayDaily;
@@ -87,7 +93,6 @@ export default async function HomePage() {
         }
       }
 
-      // Completed level indices (convert 1-indexed level_number to 0-indexed)
       completedLevelIndices = completionsData
         .filter(c => c.level_number != null)
         .map(c => (c.level_number as number) - 1);
@@ -96,6 +101,15 @@ export default async function HomePage() {
 
   const username = profile?.username ?? user?.user_metadata?.user_name ?? user?.email?.split('@')[0] ?? null;
   const dailyCategoryColor = CATEGORY_COLORS[daily.category] ?? '#4ecdc4';
+  const difficultyLabel = t.difficulty[daily.difficulty as keyof typeof t.difficulty] ?? daily.difficulty;
+
+  const levelMapLabels = {
+    myProgress: t.home.myProgress,
+    levels: t.home.levels,
+    levelShort: t.home.levelShort,
+    playLevel: t.home.playLevel,
+    play: t.home.play,
+  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
@@ -105,22 +119,22 @@ export default async function HomePage() {
         <Logo variant="icon" theme="dark" size="md" href="" />
         {user && username ? (
           <p style={{ color: '#7aa8cc', fontSize: '0.9rem', textAlign: 'center' }}>
-            Bonjour, <span style={{ color: '#e2e8f0', fontWeight: 600 }}>{username}</span> !
+            {t.home.greeting}, <span style={{ color: '#e2e8f0', fontWeight: 600 }}>{username}</span> !
           </p>
         ) : (
           <p style={{ color: '#7aa8cc', fontSize: '0.9rem', textAlign: 'center' }}>
-            Révèle des dessins cachés en résolvant des puzzles de logique
+            {t.home.tagline}
           </p>
         )}
       </section>
 
-      {/* Stats row for logged-in users */}
+      {/* Stats row */}
       {profile && (
         <section style={{ display: 'flex', gap: '0.75rem' }}>
           {[
-            { label: 'Série', value: `${profile.streak_current} 🔥`, color: '#f6c90e' },
-            { label: 'XP', value: profile.xp.toLocaleString(), color: '#4ecdc4' },
-            { label: 'Niveau', value: String(profile.level), color: '#e2e8f0' },
+            { label: t.home.streak, value: `${profile.streak_current} 🔥`, color: '#f6c90e' },
+            { label: t.home.xp, value: profile.xp.toLocaleString(), color: '#4ecdc4' },
+            { label: t.home.level, value: String(profile.level), color: '#e2e8f0' },
           ].map(({ label, value, color }) => (
             <div key={label} style={{
               flex: 1, backgroundColor: '#1a2540', border: '1px solid #2d3f5e',
@@ -137,10 +151,10 @@ export default async function HomePage() {
       <section>
         <div style={{ marginBottom: '0.75rem' }}>
           <h1 style={{ color: '#4ecdc4', fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.25rem' }}>
-            Puzzle du jour
+            {t.home.dailyTitle}
           </h1>
           <p style={{ color: '#8892a4', fontSize: '0.875rem' }}>
-            Prochain puzzle dans {getTimeUntilNextPuzzle()}
+            {t.home.nextPuzzle} {getTimeUntilNextPuzzle()}
           </p>
         </div>
 
@@ -156,7 +170,7 @@ export default async function HomePage() {
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.4rem' }}>
                   <Badge>{daily.size}×{daily.size}</Badge>
-                  <Badge color={DIFFICULTY_COLORS[daily.difficulty]}>{daily.difficulty}</Badge>
+                  <Badge color={DIFFICULTY_COLORS[daily.difficulty]}>{difficultyLabel}</Badge>
                 </div>
               </div>
               <div style={{
@@ -164,18 +178,18 @@ export default async function HomePage() {
                 color: '#4ecdc4', fontWeight: 700, fontSize: '0.8rem',
                 padding: '0.4rem 0.9rem', borderRadius: '0.375rem',
               }}>
-                ✓ Complété
+                ✓ {t.home.completed}
               </div>
             </div>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-              <Stat label="points" value={String(dailyCompletion.score)} />
-              <Stat label="temps" value={formatTime(dailyCompletion.time_seconds)} />
-              <Stat label="erreurs" value={String(dailyCompletion.errors)} color={dailyCompletion.errors > 0 ? '#ff6b6b' : '#6bcb77'} />
-              <Stat label="XP" value={`+${dailyCompletion.xp_earned}`} color="#f6c90e" />
+              <Stat label={t.home.points} value={String(dailyCompletion.score)} />
+              <Stat label={t.home.time} value={formatTime(dailyCompletion.time_seconds)} />
+              <Stat label={t.home.errors} value={String(dailyCompletion.errors)} color={dailyCompletion.errors > 0 ? '#ff6b6b' : '#6bcb77'} />
+              <Stat label={t.home.xp} value={`+${dailyCompletion.xp_earned}`} color="#f6c90e" />
               {dailyRank && (
                 <Stat
-                  label="classement vitesse"
-                  value={`${dailyRank.rank === 1 ? '1er' : `${dailyRank.rank}e`} / ${dailyRank.total}`}
+                  label={t.home.speedRanking}
+                  value={`${t.home.rankOrdinal(dailyRank.rank)} / ${dailyRank.total}`}
                   color="#c77dff"
                 />
               )}
@@ -195,7 +209,7 @@ export default async function HomePage() {
                 </span>
                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
                   <Badge>{daily.size}×{daily.size}</Badge>
-                  <Badge color={DIFFICULTY_COLORS[daily.difficulty]}>{daily.difficulty}</Badge>
+                  <Badge color={DIFFICULTY_COLORS[daily.difficulty]}>{difficultyLabel}</Badge>
                 </div>
               </div>
               <div style={{
@@ -203,14 +217,14 @@ export default async function HomePage() {
                 fontSize: '0.875rem', padding: '0.5rem 1.25rem',
                 borderRadius: '0.375rem', whiteSpace: 'nowrap',
               }}>
-                Jouer →
+                {t.home.play} →
               </div>
             </div>
           </Link>
         )}
       </section>
 
-      {/* Push reminder for logged-in users */}
+      {/* Push reminder */}
       {user && profile && profile.streak_current >= 1 && (
         <section style={{ display: 'flex', justifyContent: 'center' }}>
           <PushSubscription />
@@ -223,6 +237,7 @@ export default async function HomePage() {
           levels={LEVELS}
           completedLevelIndices={completedLevelIndices}
           isAuthenticated={!!user}
+          labels={levelMapLabels}
         />
       </section>
 

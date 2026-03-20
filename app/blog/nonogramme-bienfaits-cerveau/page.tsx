@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Les bienfaits du nonogramme pour le cerveau | Nonogramme.com',
-  description: 'Mémoire, concentration, logique déductive — découvrez pourquoi les nonogrammes sont excellents pour la santé mentale, pour tous les âges.',
+  description: 'Mémoire, concentration, logique déductive - découvrez pourquoi les nonogrammes sont excellents pour la santé mentale, pour tous les âges.',
   alternates: { canonical: 'https://nonogramme.com/blog/nonogramme-bienfaits-cerveau' },
   openGraph: {
     title: 'Bienfaits du nonogramme pour le cerveau',
@@ -99,7 +99,7 @@ export default function Page() {
       <p style={s.p}>
         Pour résoudre un nonogramme, vous devez simultanément <strong style={{ color: '#e2e8f0' }}>retenir
         les contraintes de plusieurs lignes et colonnes</strong> tout en les croisant mentalement.
-        C&apos;est la définition même de la mémoire de travail — la capacité à maintenir et manipuler des
+        C&apos;est la définition même de la mémoire de travail - la capacité à maintenir et manipuler des
         informations à court terme.
       </p>
 
@@ -118,8 +118,8 @@ export default function Page() {
       </p>
 
       <p style={s.p}>
-        Cette compétence — la <strong style={{ color: '#e2e8f0' }}>rotation mentale et la visualisation
-        2D</strong> — est étroitement liée à l&apos;aptitude aux mathématiques, aux sciences et aux arts.
+        Cette compétence - la <strong style={{ color: '#e2e8f0' }}>rotation mentale et la visualisation
+        2D</strong> - est étroitement liée à l&apos;aptitude aux mathématiques, aux sciences et aux arts.
         Elle est souvent citée comme l&apos;un des facteurs prédictifs de la réussite dans les domaines STEM.
       </p>
 
@@ -155,7 +155,7 @@ export default function Page() {
       <p style={s.p}>
         Contrairement au scrolling sur les réseaux sociaux, qui stimule sans jamais satisfaire vraiment,
         un nonogramme a un <strong style={{ color: '#e2e8f0' }}>début, un milieu et une fin</strong>.
-        Cette structure narrative simple — problème, résolution, satisfaction — nourrit le sentiment de
+        Cette structure narrative simple - problème, résolution, satisfaction - nourrit le sentiment de
         compétence et de maîtrise, deux piliers du bien-être psychologique.
       </p>
 
@@ -164,7 +164,7 @@ export default function Page() {
       <h3 style={s.h3}>Enfants (6-12 ans)</h3>
       <p style={s.p}>
         Les grilles 5×5 sont parfaites pour introduire la logique déductive. Elles renforcent la
-        persévérance, l&apos;attention aux détails et la pensée structurée — des compétences transversales
+        persévérance, l&apos;attention aux détails et la pensée structurée - des compétences transversales
         utiles à l&apos;école.
       </p>
 
@@ -172,7 +172,7 @@ export default function Page() {
       <p style={s.p}>
         Le nonogramme constitue un complément idéal à un travail intellectuellement intense. Il
         mobilise des circuits cognitifs différents de ceux sollicités par la lecture ou l&apos;écriture.
-        C&apos;est aussi une pause &quot;active&quot; — plus ressourçante que les réseaux sociaux.
+        C&apos;est aussi une pause &quot;active&quot; - plus ressourçante que les réseaux sociaux.
       </p>
 
       <h3 style={s.h3}>Seniors (60+ ans)</h3>

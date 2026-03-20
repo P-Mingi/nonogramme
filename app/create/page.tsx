@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { PuzzleEditor } from '@/components/PuzzleEditor';
 
 export const metadata: Metadata = {
-  title: 'Créer un nonogramme — Nonogramme.com',
+  title: 'Créer un nonogramme - Nonogramme.com',
   description: "Dessine et publie ton propre nonogramme. Partage-le avec tes amis et gagne de l'XP quand ils le résolvent.",
   alternates: { canonical: 'https://nonogramme.com/create' },
 };

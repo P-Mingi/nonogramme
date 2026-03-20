@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Comment créer un nonogramme | Guide complet | Nonogramme.com',
-  description: 'Apprenez à créer votre propre nonogramme étape par étape — choisir une image, calculer les indices, vérifier l\'unicité de la solution.',
+  description: 'Apprenez à créer votre propre nonogramme étape par étape - choisir une image, calculer les indices, vérifier l\'unicité de la solution.',
   alternates: { canonical: 'https://nonogramme.com/blog/creer-nonogramme' },
   openGraph: {
     title: 'Comment créer un nonogramme',
@@ -59,7 +59,7 @@ export default function Page() {
 
       <p style={s.p}>
         Créer un nonogramme est un exercice créatif accessible à tous. Il n&apos;y a pas besoin de
-        logiciel spécialisé — un peu de papier millimétré et quelques règles suffisent.
+        logiciel spécialisé - un peu de papier millimétré et quelques règles suffisent.
         Ce guide vous explique comment concevoir un puzzle nonogramme de A à Z, depuis le dessin
         jusqu&apos;au calcul des indices, en passant par la vérification de l&apos;unicité de la solution.
       </p>
@@ -85,7 +85,7 @@ export default function Page() {
           <p style={{ ...s.p, marginBottom: 0 }}>
             Sur papier millimétré, noircissez les cases pour former une image reconnaissable.
             Pensez &quot;pixel art&quot; : des formes simples, contrastées, avec une silhouette claire.
-            Un chat, un cœur, une maison, un arbre — les meilleures images nonogramme ont une
+            Un chat, un cœur, une maison, un arbre - les meilleures images nonogramme ont une
             silhouette immédiatement identifiable une fois révélée.
           </p>
         </div>
@@ -120,7 +120,7 @@ export default function Page() {
         <div>
           <div style={{ fontWeight: 700, color: '#e2e8f0', marginBottom: '0.25rem' }}>Vérifier l&apos;unicité de la solution</div>
           <p style={{ ...s.p, marginBottom: 0 }}>
-            C&apos;est l&apos;étape la plus importante — et la plus souvent oubliée par les débutants.
+            C&apos;est l&apos;étape la plus importante - et la plus souvent oubliée par les débutants.
             Un nonogramme valide doit avoir <strong style={{ color: '#e2e8f0' }}>exactement une solution</strong>.
             Si deux grilles différentes satisfont les mêmes indices, votre puzzle est invalide.
             Vérifiez manuellement en essayant de résoudre votre propre puzzle à partir des indices seulement
@@ -132,7 +132,7 @@ export default function Page() {
       <h2 style={s.h2}>L&apos;unicité : le défi principal</h2>
 
       <p style={s.p}>
-        La plupart des images pixel art naïves génèrent des puzzles avec plusieurs solutions — ce qui
+        La plupart des images pixel art naïves génèrent des puzzles avec plusieurs solutions - ce qui
         les rend insatisfaisants à résoudre (impossible de savoir si on a &quot;la bonne&quot; réponse).
         Pour garantir l&apos;unicité, suivez ces règles :
       </p>
@@ -148,7 +148,7 @@ export default function Page() {
       <p style={s.p}>
         Un indice <code style={s.code}>3 3</code> sur une ligne de 10 crée une ambiguïté
         (le groupe peut être décalé de plusieurs façons). Un indice
-        <code style={s.code}> 2 4</code> est beaucoup plus contraignant — les deux groupes
+        <code style={s.code}> 2 4</code> est beaucoup plus contraignant - les deux groupes
         ne peuvent pas s&apos;échanger.
       </p>
 
@@ -162,7 +162,7 @@ export default function Page() {
 
       <div style={s.highlight}>
         💡 <strong>Conseil :</strong> La plupart des créateurs de nonogrammes expérimentés commencent
-        par l&apos;image, puis itèrent — modifiant un ou deux pixels — jusqu&apos;à obtenir un puzzle
+        par l&apos;image, puis itèrent - modifiant un ou deux pixels - jusqu&apos;à obtenir un puzzle
         avec une solution unique. C&apos;est un vrai processus créatif.
       </div>
 
@@ -170,7 +170,7 @@ export default function Page() {
 
       <p style={s.p}>
         <strong style={{ color: '#e2e8f0' }}>La silhouette prime.</strong> Une image nonogramme est
-        souvent vue en négatif — la forme globale doit être reconnaissable avant même d&apos;être
+        souvent vue en négatif - la forme globale doit être reconnaissable avant même d&apos;être
         colorée. Pensez à la silhouette en noir sur fond blanc.
       </p>
 

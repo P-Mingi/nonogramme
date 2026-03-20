@@ -19,6 +19,14 @@ export const en: Translations = {
     level: 'Level',
     completed: 'Completed',
     xp: 'XP',
+    greeting: 'Hello',
+    points: 'points',
+    time: 'time',
+    errors: 'errors',
+    speedRanking: 'speed ranking',
+    levelShort: 'Lv.',
+    playLevel: 'Play level',
+    rankOrdinal: (n: number) => `#${n}`,
   },
   game: {
     fill: 'Fill',
@@ -49,9 +57,9 @@ export const en: Translations = {
     expert: 'Expert',
   },
   seo: {
-    siteTitle: 'Nonogram.com — Free Logic Puzzles',
+    siteTitle: 'Nonogram.com - Free Logic Puzzles',
     siteDescription: 'Reveal hidden pixel art by solving Japanese logic puzzles. Free nonograms, picross and griddlers online.',
-    puzzleTitle: (name: string, size: number) => `${name} — Free ${size}×${size} Nonogram`,
+    puzzleTitle: (name: string, size: number) => `${name} - Free ${size}×${size} Nonogram`,
     puzzleDescription: (name: string, difficulty: string, size: number) =>
       `Play the free nonogram "${name}" (${difficulty}, ${size}×${size}). Reveal the hidden image!`,
   },

@@ -15,10 +15,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://nonogramme.com'),
   title: {
-    default: 'Nonogramme.com — Jeux de logique gratuits',
+    default: 'Nonogramme.com - Jeux de logique gratuits',
     template: '%s | Nonogramme.com',
   },
-  description: 'Révèle des dessins cachés en résolvant des puzzles de logique japonais. Nonogrammes, picross et logimages gratuits en ligne — facile, moyen, difficile, expert.',
+  description: 'Révèle des dessins cachés en résolvant des puzzles de logique japonais. Nonogrammes, picross et logimages gratuits en ligne - facile, moyen, difficile, expert.',
   keywords: [
     'nonogramme', 'picross', 'logimage', 'hanjie', 'griddler',
     'jeu de logique', 'puzzle gratuit', 'jeu en ligne', 'casse-tête',
@@ -32,18 +32,18 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://nonogramme.com',
     siteName: 'Nonogramme.com',
-    title: 'Nonogramme.com — Jeux de logique gratuits',
-    description: 'Révèle des dessins cachés. Puzzles de logique gratuits — nonogramme, picross, logimage.',
+    title: 'Nonogramme.com - Jeux de logique gratuits',
+    description: 'Révèle des dessins cachés. Puzzles de logique gratuits - nonogramme, picross, logimage.',
     images: [{
       url: '/og-image.svg',
       width: 1200,
       height: 630,
-      alt: 'Nonogramme.com — Jeux de logique gratuits',
+      alt: 'Nonogramme.com - Jeux de logique gratuits',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nonogramme.com — Jeux de logique gratuits',
+    title: 'Nonogramme.com - Jeux de logique gratuits',
     description: 'Révèle des dessins cachés. Puzzles de logique gratuits.',
     images: ['/og-image.svg'],
   },

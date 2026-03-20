@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Histoire du nonogramme — origine du picross | Nonogramme.com',
+  title: 'Histoire du nonogramme - origine du picross | Nonogramme.com',
   description: 'L\'histoire complète du nonogramme : inventé simultanément au Japon et en Israël, popularisé par Nintendo, devenu un classique mondial.',
   alternates: { canonical: 'https://nonogramme.com/blog/histoire-nonogramme' },
   openGraph: {
-    title: 'Histoire du nonogramme — origine et évolution',
+    title: 'Histoire du nonogramme - origine et évolution',
     description: 'Du Japon à Nintendo en passant par les magazines français, l\'histoire fascinante du nonogramme.',
   },
 };
@@ -48,23 +48,23 @@ export default function Page() {
   return (
     <article>
       <p style={s.em}>Histoire · 6 min de lecture</p>
-      <h1 style={s.h1}>Histoire du nonogramme — l&apos;origine du picross</h1>
+      <h1 style={s.h1}>Histoire du nonogramme - l&apos;origine du picross</h1>
       <p style={{ ...s.p, color: '#8892a4' }}>Publié le 20 mars 2026</p>
 
       <p style={s.p}>
         Le nonogramme est l&apos;un des rares jeux de puzzle à avoir été inventé de façon totalement
         indépendante par deux personnes sur deux continents différents, à quelques années d&apos;intervalle.
-        Son histoire mêle Tokyo, Tel Aviv, Nintendo et les magazines français des années 1990 — une
+        Son histoire mêle Tokyo, Tel Aviv, Nintendo et les magazines français des années 1990 - une
         trajectoire fascinante pour un jeu en apparence si simple.
       </p>
 
       <h2 style={s.h2}>Les origines : une invention parallèle</h2>
 
-      <h3 style={s.h3}>Non Ishida — Tokyo, 1987</h3>
+      <h3 style={s.h3}>Non Ishida - Tokyo, 1987</h3>
       <p style={s.p}>
         En 1987, <strong style={{ color: '#e2e8f0' }}>Non Ishida</strong>, artiste graphique japonaise,
         découvre dans les panneaux de néons de Tokyo une inspiration inattendue. Elle remarque que
-        les néons — qui s&apos;allument et s&apos;éteignent en séquences — forment des images
+        les néons - qui s&apos;allument et s&apos;éteignent en séquences - forment des images
         reconnaissables à partir de simples grilles de carrés lumineux.
       </p>
 
@@ -72,15 +72,15 @@ export default function Page() {
         Elle développe un système de puzzles basé sur ce principe et remporte en 1988 le
         <em> concours de puzzles du magazine Window Art Puzzles</em>. Son jeu est publié
         au Japon sous le nom <strong style={{ color: '#e2e8f0' }}>お絵かきロジック</strong>
-        (oekaki logic — &quot;logique dessin&quot;).
+        (oekaki logic - &quot;logique dessin&quot;).
       </p>
 
-      <h3 style={s.h3}>Tetsuya Nishio — Tokyo, 1988</h3>
+      <h3 style={s.h3}>Tetsuya Nishio - Tokyo, 1988</h3>
       <p style={s.p}>
         La même année, <strong style={{ color: '#e2e8f0' }}>Tetsuya Nishio</strong>, architecte de
         formation, publie indépendamment un système de puzzle identique dans le magazine japonais
         <em> Nikoli</em> (célèbre pour avoir popularisé le sudoku). Les deux inventeurs se disputeront
-        longtemps la paternité du jeu — la question reste débattue aujourd&apos;hui.
+        longtemps la paternité du jeu - la question reste débattue aujourd&apos;hui.
       </p>
 
       <h2 style={s.h2}>Chronologie</h2>
@@ -91,11 +91,11 @@ export default function Page() {
           { year: '1988', text: 'Tetsuya Nishio publie ses puzzles dans Nikoli. Le format se standardise au Japon.' },
           { year: '1990', text: 'Publication en Angleterre dans le Sunday Telegraph sous le nom &quot;Nonogram&quot; (contraction de Non Ishida + Diagram).' },
           { year: '1993', text: 'Apparition en France dans les magazines de puzzles sous le nom &quot;logimage&quot; (contraction de &quot;logique&quot; + &quot;image&quot;).' },
-          { year: '1995', text: 'Nintendo publie Mario\'s Picross sur Game Boy — premier jeu vidéo nonogramme commercial. Le terme &quot;picross&quot; (picture + cross) entre dans le vocabulaire mondial.' },
+          { year: '1995', text: 'Nintendo publie Mario\'s Picross sur Game Boy - premier jeu vidéo nonogramme commercial. Le terme &quot;picross&quot; (picture + cross) entre dans le vocabulaire mondial.' },
           { year: '1999', text: 'Picross NP sur Super Famicom (SNES), premier picross en couleurs à grande diffusion.' },
-          { year: '2007', text: 'Picross DS sur Nintendo DS — le jeu le plus vendu de la série, avec plus de 150 puzzles intégrés et une fonctionnalité de création.' },
-          { year: '2013', text: 'Picross e sur Nintendo 3DS — début d\'une longue série de DLC et extensions. Plus de 10 volumes sortiront jusqu\'en 2018.' },
-          { year: '2017', text: 'Picross S sur Nintendo Switch — la série continue sur la nouvelle console avec des grilles jusqu\'à 20×15.' },
+          { year: '2007', text: 'Picross DS sur Nintendo DS - le jeu le plus vendu de la série, avec plus de 150 puzzles intégrés et une fonctionnalité de création.' },
+          { year: '2013', text: 'Picross e sur Nintendo 3DS - début d\'une longue série de DLC et extensions. Plus de 10 volumes sortiront jusqu\'en 2018.' },
+          { year: '2017', text: 'Picross S sur Nintendo Switch - la série continue sur la nouvelle console avec des grilles jusqu\'à 20×15.' },
           { year: '2024', text: 'Le nonogramme est l\'un des puzzles logiques les plus joués en ligne, avec des dizaines de millions de joueurs actifs.' },
         ].map(({ year, text }) => (
           <div key={year} style={s.timelineItem}>
@@ -128,7 +128,7 @@ export default function Page() {
 
       <p style={s.p}>
         <strong style={{ color: '#e2e8f0' }}>Hanjie</strong> : terme anglais utilisé par les journaux
-        britanniques (notamment The Guardian), d&apos;origine japonaise — 判じ絵 signifie &quot;image
+        britanniques (notamment The Guardian), d&apos;origine japonaise - 判じ絵 signifie &quot;image
         à deviner&quot;.
       </p>
 
@@ -137,19 +137,19 @@ export default function Page() {
       <p style={s.p}>
         L&apos;essor d&apos;internet dans les années 2000 a libéré le nonogramme des contraintes
         du papier et du jeu vidéo commercial. Des milliers de créateurs amateurs ont publié leurs
-        propres puzzles en ligne — certains sites en proposent aujourd&apos;hui plus de 100 000.
+        propres puzzles en ligne - certains sites en proposent aujourd&apos;hui plus de 100 000.
       </p>
 
       <p style={s.p}>
         Les applications mobiles ont ensuite rendu le picross accessible à des audiences encore plus
         larges. Picross Touch, Nonogram.com, et des dizaines d&apos;autres jeux ont introduit le puzzle
-        à une nouvelle génération — souvent sans qu&apos;ils connaissent l&apos;histoire derrière ce
+        à une nouvelle génération - souvent sans qu&apos;ils connaissent l&apos;histoire derrière ce
         simple jeu de cases noires et blanches.
       </p>
 
       <p style={s.p}>
         Aujourd&apos;hui, le nonogramme est reconnu comme un puzzle de logique &quot;classique&quot;
-        au même titre que le sudoku ou les mots croisés — un statut que peu auraient prédit pour
+        au même titre que le sudoku ou les mots croisés - un statut que peu auraient prédit pour
         un jeu inventé dans les années 1980 par deux personnes qui ne se connaissaient pas.
       </p>
 

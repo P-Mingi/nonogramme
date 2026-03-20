@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Nonogramme ou Picross — quelle est la différence ? | Nonogramme.com',
+  title: 'Nonogramme ou Picross - quelle est la différence ? | Nonogramme.com',
   description: 'Nonogramme, picross, logimage, hanjie, griddler... Découvrez l\'origine et l\'histoire de ce jeu de logique japonais et pourquoi il porte autant de noms.',
   alternates: { canonical: 'https://nonogramme.com/blog/nonogramme-vs-picross' },
   openGraph: {
-    title: 'Nonogramme vs Picross — histoire et différences',
+    title: 'Nonogramme vs Picross - histoire et différences',
     description: 'Tous les noms de ce puzzle de logique expliqués : origine japonaise, Nintendo Picross, logimage français.',
   },
 };
@@ -54,7 +54,7 @@ export default function Page() {
   return (
     <article>
       <p style={s.em}>Culture · 3 min de lecture</p>
-      <h1 style={s.h1}>Nonogramme ou Picross — quelle est la différence ?</h1>
+      <h1 style={s.h1}>Nonogramme ou Picross - quelle est la différence ?</h1>
       <p style={{ ...s.p, color: '#8892a4' }}>Publié le 20 mars 2026</p>
 
       <p style={s.p}>
@@ -88,7 +88,7 @@ export default function Page() {
       <p style={s.p}>
         Le grand saut vers la popularité mondiale vient de <strong style={{ color: '#e2e8f0' }}>Nintendo</strong>.
         En 1995, la firme japonaise publie <em>Mario&apos;s Picross</em> sur Game Boy, introduisant le terme
-        &quot;Picross&quot; (contraction de &quot;Picture Crossword&quot; — mots croisés en images). La série Picross de
+        &quot;Picross&quot; (contraction de &quot;Picture Crossword&quot; - mots croisés en images). La série Picross de
         Nintendo a depuis vendu des millions de copies sur toutes les consoles portables, de la Game Boy
         à la Nintendo Switch.
       </p>
@@ -101,7 +101,7 @@ export default function Page() {
       <h2 style={s.h2}>En France : le logimage</h2>
 
       <p style={s.p}>
-        En France, ces puzzles sont traditionnellement appelés <strong style={{ color: '#e2e8f0' }}>logimage</strong> —
+        En France, ces puzzles sont traditionnellement appelés <strong style={{ color: '#e2e8f0' }}>logimage</strong> -
         contraction de &quot;logique&quot; et &quot;image&quot;. Le terme est particulièrement utilisé dans les magazines de
         jeux et les livres de puzzles français. Vous trouverez aussi le terme &quot;coloriages mystères&quot; dans
         certaines publications destinées aux enfants.
@@ -141,7 +141,7 @@ export default function Page() {
 
       <p style={s.p}>
         Presque. La grande majorité de ces jeux utilisent des grilles noir et blanc avec des indices
-        numériques — c&apos;est ce que vous trouverez sur Nonogramme.com. Il existe cependant des variantes :
+        numériques - c&apos;est ce que vous trouverez sur Nonogramme.com. Il existe cependant des variantes :
         les <strong style={{ color: '#e2e8f0' }}>griddlers en couleur</strong> utilisent plusieurs couleurs,
         avec des indices colorés. Les <strong style={{ color: '#e2e8f0' }}>Picross 3D</strong> de Nintendo
         étendent le concept à trois dimensions. Mais le jeu classique en noir et blanc reste le plus

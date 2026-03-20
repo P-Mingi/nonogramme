@@ -75,7 +75,7 @@ export async function POST(request: Request) {
 
   if (existing) {
     return NextResponse.json({
-      error: 'Un puzzle avec ce nom existe déjà — essaie un autre nom',
+      error: 'Un puzzle avec ce nom existe déjà - essaie un autre nom',
     }, { status: 409 });
   }
 

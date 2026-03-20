@@ -49,6 +49,9 @@ export async function DeepSpaceLayout({ children, locale = 'fr' }: Props) {
             <Link href={`${prefix}/leaderboard`} style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
               {t.nav.leaderboard}
             </Link>
+            <Link href={`${prefix}/communaute`} style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
+              Communauté
+            </Link>
             {user && (
               <Link href="/create" style={{ color: '#4ecdc4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 700 }}>
                 ✏️ Créer

@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
         { endpoint: sub.endpoint, keys: { p256dh: sub.p256dh, auth: sub.auth } },
         {
           title: 'Nonogramme du jour 🧩',
-          body: 'Votre puzzle quotidien vous attend — maintenez votre série !',
+          body: 'Votre puzzle quotidien vous attend - maintenez votre série !',
           url: '/',
         }
       ).catch(async (err: { statusCode?: number }) => {

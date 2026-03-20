@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { LeaderboardClient } from '@/components/LeaderboardClient';
 
 export const metadata: Metadata = {
-  title: 'Classement — Nonogramme.com',
+  title: 'Classement - Nonogramme.com',
   description: 'Classement en direct des meilleurs joueurs de nonogramme. Qui résout le plus de puzzles cette semaine ?',
   alternates: { canonical: 'https://nonogramme.com/leaderboard' },
 };

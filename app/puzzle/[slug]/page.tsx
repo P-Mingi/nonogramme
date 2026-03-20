@@ -43,16 +43,16 @@ export async function generateMetadata({
   if (!puzzle) return { title: 'Puzzle introuvable' };
 
   return {
-    title: `${puzzle.name} — Nonogramme ${puzzle.size}×${puzzle.size}`,
-    description: `Jouez au nonogramme "${puzzle.name}" — ${puzzle.difficulty}, ${puzzle.size}×${puzzle.size}. Révèle l'image cachée gratuitement.`,
+    title: `${puzzle.name} - Nonogramme ${puzzle.size}×${puzzle.size}`,
+    description: `Jouez au nonogramme "${puzzle.name}" - ${puzzle.difficulty}, ${puzzle.size}×${puzzle.size}. Révèle l'image cachée gratuitement.`,
     keywords: [
       'nonogramme', 'picross', 'logimage', puzzle.name,
       `nonogramme ${puzzle.size}x${puzzle.size}`,
       ...puzzle.meta.tags,
     ],
     openGraph: {
-      title: `${puzzle.name} — Nonogramme ${puzzle.size}×${puzzle.size}`,
-      description: `Puzzle de logique gratuit — ${puzzle.difficulty}`,
+      title: `${puzzle.name} - Nonogramme ${puzzle.size}×${puzzle.size}`,
+      description: `Puzzle de logique gratuit - ${puzzle.difficulty}`,
     },
     alternates: { canonical: `https://nonogramme.com/puzzle/${slug}` },
   };

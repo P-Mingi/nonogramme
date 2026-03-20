@@ -4,13 +4,31 @@ import { useRouter } from 'next/navigation';
 import { type LevelEntry, getUserCurrentLevel } from '@/lib/levels';
 import { SignUpBanner } from '@/components/SignUpBanner';
 
+interface LevelMapLabels {
+  myProgress: string;
+  levels: string;
+  levelShort: string;
+  playLevel: string;
+  play: string;
+}
+
 interface LevelMapProps {
   levels: LevelEntry[];
   completedLevelIndices: number[];  // 0-indexed: [0, 1, 2] = levels 1,2,3 done
   isAuthenticated: boolean;
+  labels?: LevelMapLabels;
 }
 
-export function LevelMap({ levels, completedLevelIndices, isAuthenticated }: LevelMapProps) {
+const DEFAULT_LABELS: LevelMapLabels = {
+  myProgress: 'Ma progression',
+  levels: 'niveaux',
+  levelShort: 'Niv.',
+  playLevel: 'Jouer le niveau',
+  play: 'Jouer',
+};
+
+export function LevelMap({ levels, completedLevelIndices, isAuthenticated, labels }: LevelMapProps) {
+  const L = labels ?? DEFAULT_LABELS;
   const router = useRouter();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const currentNodeRef = useRef<HTMLDivElement>(null);
@@ -56,10 +74,10 @@ export function LevelMap({ levels, completedLevelIndices, isAuthenticated }: Lev
       {/* Section header */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
         <h2 style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#4ecdc4' }}>
-          Ma progression
+          {L.myProgress}
         </h2>
         <span style={{ fontSize: '0.75rem', color: '#3d6080' }}>
-          {completed.length} / {levels.length} niveaux
+          {completed.length} / {levels.length} {L.levels}
         </span>
       </div>
 
@@ -134,7 +152,7 @@ export function LevelMap({ levels, completedLevelIndices, isAuthenticated }: Lev
                       flexShrink: 0,
                       outline: 'none',
                     }}
-                    aria-label={`Niveau ${level.number} — ${level.name}`}
+                    aria-label={`Niveau ${level.number} - ${level.name}`}
                   >
                     {isCompleted ? '✓' : isLocked && level.isPremium ? '💎' : isLocked ? '🔒' : level.number}
 
@@ -198,7 +216,7 @@ export function LevelMap({ levels, completedLevelIndices, isAuthenticated }: Lev
                       fontWeight: 700,
                       color: isCompleted ? '#4ecdc4' : isCurrent ? '#ffd93d' : '#3d6080',
                     }}>
-                      {isCurrent ? `Niv. ${level.number}` : level.number}
+                      {isCurrent ? `${L.levelShort} ${level.number}` : level.number}
                     </div>
                     <div style={{
                       fontSize: 9,
@@ -237,7 +255,7 @@ export function LevelMap({ levels, completedLevelIndices, isAuthenticated }: Lev
           cursor: 'pointer',
         }}
       >
-        ▶ Jouer le niveau {levels[currentLevelIdx].number} — {levels[currentLevelIdx].name}
+        ▶ {L.playLevel} {levels[currentLevelIdx].number} — {levels[currentLevelIdx].name}
       </button>
 
       {/* Ping animation keyframes */}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Blog Nonogramme — Guides, tutoriels et astuces | Nonogramme.com',
+  title: 'Blog Nonogramme - Guides, tutoriels et astuces | Nonogramme.com',
   description: 'Guides, tutoriels et astuces pour maîtriser les nonogrammes et picross. Apprenez les règles, les techniques avancées et les bienfaits de ce jeu de logique.',
   alternates: { canonical: 'https://nonogramme.com/blog' },
 };
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const ARTICLES = [
   {
     slug: 'comment-jouer-nonogramme',
-    title: 'Comment jouer au nonogramme — guide complet pour débutants',
+    title: 'Comment jouer au nonogramme - guide complet pour débutants',
     description: 'Apprenez les règles du nonogramme en 5 minutes avec des exemples illustrés.',
     date: '2026-03-20',
     readTime: '5 min',
@@ -26,7 +26,7 @@ const ARTICLES = [
   },
   {
     slug: 'nonogramme-vs-picross',
-    title: 'Nonogramme ou Picross — quelle est la différence ?',
+    title: 'Nonogramme ou Picross - quelle est la différence ?',
     description: 'Logimage, hanjie, griddler, picross... tous les noms de ce jeu expliqués.',
     date: '2026-03-20',
     readTime: '3 min',
@@ -43,14 +43,14 @@ const ARTICLES = [
   {
     slug: 'nonogramme-bienfaits-cerveau',
     title: 'Les bienfaits du nonogramme pour le cerveau',
-    description: 'Mémoire, concentration, logique — pourquoi les puzzles sont bons pour la santé mentale.',
+    description: 'Mémoire, concentration, logique - pourquoi les puzzles sont bons pour la santé mentale.',
     date: '2026-03-20',
     readTime: '4 min',
     category: 'Santé',
   },
   {
     slug: 'logimage-en-ligne-gratuit',
-    title: 'Logimage en ligne gratuit — jouez maintenant',
+    title: 'Logimage en ligne gratuit - jouez maintenant',
     description: 'Tout sur le logimage : règles, techniques et où jouer gratuitement en ligne.',
     date: '2026-03-20',
     readTime: '5 min',
@@ -58,7 +58,7 @@ const ARTICLES = [
   },
   {
     slug: 'picross-gratuit-en-ligne',
-    title: 'Picross gratuit en ligne — le guide complet',
+    title: 'Picross gratuit en ligne - le guide complet',
     description: 'Histoire du picross, différences avec le nonogramme, et où jouer sans payer.',
     date: '2026-03-20',
     readTime: '4 min',
@@ -66,7 +66,7 @@ const ARTICLES = [
   },
   {
     slug: 'nonogramme-enfant',
-    title: 'Nonogramme enfant — puzzles logiques dès 6 ans',
+    title: 'Nonogramme enfant - puzzles logiques dès 6 ans',
     description: 'Grilles adaptées par tranche d\'âge et conseils pour jouer en famille.',
     date: '2026-03-20',
     readTime: '5 min',
@@ -82,7 +82,7 @@ const ARTICLES = [
   },
   {
     slug: 'nonogramme-imprimer',
-    title: 'Nonogramme à imprimer — grilles gratuites',
+    title: 'Nonogramme à imprimer - grilles gratuites',
     description: 'Comment imprimer des nonogrammes pour jouer sans écran, à l\'école ou en voyage.',
     date: '2026-03-20',
     readTime: '4 min',
@@ -90,7 +90,7 @@ const ARTICLES = [
   },
   {
     slug: 'histoire-nonogramme',
-    title: 'Histoire du nonogramme — l\'origine du picross',
+    title: 'Histoire du nonogramme - l\'origine du picross',
     description: 'De Tokyo à Nintendo en passant par la France : l\'histoire complète du nonogramme.',
     date: '2026-03-20',
     readTime: '6 min',

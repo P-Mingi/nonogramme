@@ -6,7 +6,7 @@ import { ProfileEditForm } from '@/components/ProfileEditForm';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mon profil — Nonogramme.com',
+  title: 'Mon profil - Nonogramme.com',
 };
 
 function formatTime(s: number): string {
@@ -91,7 +91,7 @@ export default async function ProfilePage() {
         <div>
           <div style={{ fontWeight: 700, fontSize: '1.125rem', color: '#e2e8f0' }}>{username}</div>
           <div style={{ fontSize: '0.8rem', color: '#4ecdc4', marginTop: '0.15rem' }}>
-            Niveau {profile.level} — {levelInfo.name}
+            Niveau {profile.level} - {levelInfo.name}
           </div>
         </div>
       </div>

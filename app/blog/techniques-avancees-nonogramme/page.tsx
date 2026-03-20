@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Maîtrisez les nonogrammes difficiles avec les techniques des experts : chevauchement, forçage, élimination et déduction croisée. Exemples détaillés.',
   alternates: { canonical: 'https://nonogramme.com/blog/techniques-avancees-nonogramme' },
   openGraph: {
-    title: 'Techniques avancées nonogramme — Guide expert',
+    title: 'Techniques avancées nonogramme - Guide expert',
     description: 'Les méthodes des experts pour résoudre les nonogrammes difficiles.',
   },
 };
@@ -167,7 +167,7 @@ export default function Page() {
       <p style={s.p}>
         <strong style={{ color: '#e2e8f0' }}>Exemple :</strong> Ligne de 10 cases, indice &quot;2 2&quot;. Les cases
         5 et 6 pourraient sembler ambiguës. Mais si une case voisine est confirmée remplie, et que cela
-        forcerait un groupe de 3 au lieu de 2, alors cette hypothèse est impossible — et la case doit être vide.
+        forcerait un groupe de 3 au lieu de 2, alors cette hypothèse est impossible - et la case doit être vide.
       </p>
 
       <h2 style={s.h2}>Exemple pratique : résoudre une grille 5×5 difficile</h2>

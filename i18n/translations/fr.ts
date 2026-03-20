@@ -17,6 +17,14 @@ export const fr = {
     level: 'Niveau',
     completed: 'Complété',
     xp: 'XP',
+    greeting: 'Bonjour',
+    points: 'points',
+    time: 'temps',
+    errors: 'erreurs',
+    speedRanking: 'classement vitesse',
+    levelShort: 'Niv.',
+    playLevel: 'Jouer le niveau',
+    rankOrdinal: (n: number) => n === 1 ? '1er' : `${n}e`,
   },
   game: {
     fill: 'Remplir',
@@ -47,9 +55,9 @@ export const fr = {
     expert: 'Expert',
   },
   seo: {
-    siteTitle: 'Nonogramme.com — Jeux de logique gratuits',
+    siteTitle: 'Nonogramme.com - Jeux de logique gratuits',
     siteDescription: 'Révèle des dessins cachés en résolvant des puzzles de logique japonais. Nonogrammes, picross et logimages gratuits en ligne.',
-    puzzleTitle: (name: string, size: number) => `${name} — Nonogramme ${size}×${size} gratuit`,
+    puzzleTitle: (name: string, size: number) => `${name} - Nonogramme ${size}×${size} gratuit`,
     puzzleDescription: (name: string, difficulty: string, size: number) =>
       `Jouez gratuitement au nonogramme "${name}" (${difficulty}, ${size}×${size}). Révèle l'image cachée !`,
   },

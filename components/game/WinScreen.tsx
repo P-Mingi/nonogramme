@@ -112,7 +112,7 @@ export function WinScreen({ puzzleName, score, timeSeconds, errors, xpEarned, so
             className="w-full py-3 rounded-xl text-sm font-bold transition-all"
             style={{ background: 'linear-gradient(135deg, #4ecdc4, #45b7d1)', color: '#070d17' }}
           >
-            ▶ {t.win.nextLevel} {nextLevel.number} — {nextLevel.name}
+            ▶ {t.win.nextLevel} {nextLevel.number} - {nextLevel.name}
           </button>
         )}
 

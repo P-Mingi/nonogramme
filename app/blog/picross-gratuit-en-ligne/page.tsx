@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://nonogramme.com/blog/picross-gratuit-en-ligne' },
   openGraph: {
     title: 'Picross gratuit en ligne',
-    description: 'Le picross classique dans votre navigateur — gratuit, sans pub, nouveau puzzle chaque jour.',
+    description: 'Le picross classique dans votre navigateur - gratuit, sans pub, nouveau puzzle chaque jour.',
   },
 };
 
@@ -50,7 +50,7 @@ export default function Page() {
   return (
     <article>
       <p style={s.em}>Puzzle logique · 4 min de lecture</p>
-      <h1 style={s.h1}>Picross gratuit en ligne — le guide complet</h1>
+      <h1 style={s.h1}>Picross gratuit en ligne - le guide complet</h1>
       <p style={{ ...s.p, color: '#8892a4' }}>Publié le 20 mars 2026</p>
 
       <p style={s.p}>
@@ -120,7 +120,7 @@ export default function Page() {
 
       <p style={s.p}>
         <strong style={{ color: '#e2e8f0' }}>Outil Remplir :</strong> cliquez ou glissez sur une case pour
-        la noircir. C&apos;est l&apos;outil principal — utilisez-le pour les cases que vous avez
+        la noircir. C&apos;est l&apos;outil principal - utilisez-le pour les cases que vous avez
         <em> déterminé avec certitude</em> qu&apos;elles sont noires.
       </p>
 

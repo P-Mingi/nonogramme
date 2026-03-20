@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Nonogramme à imprimer — grilles gratuites PDF | Nonogramme.com',
+  title: 'Nonogramme à imprimer - grilles gratuites PDF | Nonogramme.com',
   description: 'Téléchargez et imprimez des nonogrammes gratuits. Grilles 5×5, 10×10 et 15×15 en PDF, parfaites pour les enfants, l\'école ou les voyages.',
   alternates: { canonical: 'https://nonogramme.com/blog/nonogramme-imprimer' },
   openGraph: {
-    title: 'Nonogramme à imprimer — grilles gratuites',
+    title: 'Nonogramme à imprimer - grilles gratuites',
     description: 'Grilles nonogramme à imprimer gratuitement pour jouer sans écran.',
   },
 };
@@ -47,11 +47,11 @@ export default function Page() {
   return (
     <article>
       <p style={s.em}>Ressources · 4 min de lecture</p>
-      <h1 style={s.h1}>Nonogramme à imprimer — grilles gratuites</h1>
+      <h1 style={s.h1}>Nonogramme à imprimer - grilles gratuites</h1>
       <p style={{ ...s.p, color: '#8892a4' }}>Publié le 20 mars 2026</p>
 
       <p style={s.p}>
-        Vous souhaitez jouer au nonogramme sans écran — en voyage, à l&apos;école, dans la salle
+        Vous souhaitez jouer au nonogramme sans écran - en voyage, à l&apos;école, dans la salle
         d&apos;attente ou simplement pour le plaisir du papier-crayon ? Les nonogrammes à imprimer
         sont une excellente alternative aux versions numériques. Ce guide vous explique comment
         trouver, télécharger et imprimer des grilles de qualité, gratuitement.
@@ -73,7 +73,7 @@ export default function Page() {
       <p style={s.p}>
         <strong style={{ color: '#e2e8f0' }}>1. Choisir une image simple.</strong> Sur papier
         millimétré ou dans un tableur, dessinez votre image en cochant les cases noires.
-        Pour une grille 10×10, comptez 10 colonnes et 10 lignes — chaque case mesure idéalement
+        Pour une grille 10×10, comptez 10 colonnes et 10 lignes - chaque case mesure idéalement
         0,5 à 1 cm pour être confortable à remplir au stylo.
       </p>
 
@@ -130,7 +130,7 @@ export default function Page() {
       <p style={s.p}>
         <strong style={{ color: '#e2e8f0' }}>Atelier autonomie.</strong> Pour les élèves qui terminent
         leur travail en avance, une feuille de 4 nonogrammes 5×5 peut occuper 15 à 20 minutes.
-        Aucune assistance requise — le puzzle est auto-corrigé (l&apos;image apparaît quand c&apos;est
+        Aucune assistance requise - le puzzle est auto-corrigé (l&apos;image apparaît quand c&apos;est
         juste).
       </p>
 

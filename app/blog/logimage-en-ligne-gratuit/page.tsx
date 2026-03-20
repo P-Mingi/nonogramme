@@ -38,7 +38,7 @@ export default function Page() {
   return (
     <article>
       <p style={s.em}>Puzzle logique · 5 min de lecture</p>
-      <h1 style={s.h1}>Logimage en ligne gratuit — jouez maintenant</h1>
+      <h1 style={s.h1}>Logimage en ligne gratuit - jouez maintenant</h1>
       <p style={{ ...s.p, color: '#8892a4' }}>Publié le 20 mars 2026</p>
 
       <p style={s.p}>
@@ -50,7 +50,7 @@ export default function Page() {
 
       <div style={s.highlight}>
         🎮 <strong>Jouez maintenant :</strong> notre collection propose des logimages de niveaux 5×5,
-        10×10 et 15×15 — classés de facile à expert, avec un nouveau puzzle chaque jour.
+        10×10 et 15×15 - classés de facile à expert, avec un nouveau puzzle chaque jour.
       </div>
 
       <h2 style={s.h2}>Qu&apos;est-ce qu&apos;un logimage ?</h2>
@@ -64,7 +64,7 @@ export default function Page() {
         Vous avez une grille vide avec, en marge de chaque ligne et de chaque colonne, des <strong style={{ color: '#e2e8f0' }}>séquences de chiffres</strong>.
         Ces chiffres indiquent la longueur et l&apos;ordre des groupes de cases à noircir. En combinant
         les informations de toutes les lignes et colonnes, vous déduisez logiquement quelles cases
-        colorier — sans jamais avoir à deviner.
+        colorier - sans jamais avoir à deviner.
       </p>
 
       <h2 style={s.h2}>Comment résoudre un logimage ?</h2>
@@ -87,7 +87,7 @@ export default function Page() {
       <h3 style={s.h3}>Élimination progressive</h3>
       <p style={s.p}>
         Une fois quelques cases fixées, chaque nouvelle information réduit les possibilités restantes.
-        Traitez les lignes et colonnes les plus contraintes en premier — elles vous donnent les certitudes
+        Traitez les lignes et colonnes les plus contraintes en premier - elles vous donnent les certitudes
         qui débloquent les autres.
       </p>
 
@@ -106,13 +106,13 @@ export default function Page() {
       <p style={s.p}>
         <strong style={{ color: '#e2e8f0' }}>Validation automatique.</strong> Dès que votre solution est
         complète et correcte, le jeu vous le confirme instantanément avec l&apos;image révélée.
-        Pas de doute possible — c&apos;est résolu ou ce ne l&apos;est pas.
+        Pas de doute possible - c&apos;est résolu ou ce ne l&apos;est pas.
       </p>
 
       <p style={s.p}>
         <strong style={{ color: '#e2e8f0' }}>Accès illimité, gratuit.</strong> Les magazines de logimage
         coûtent plusieurs euros et contiennent une dizaine de grilles. En ligne, vous avez accès à des
-        centaines de puzzles instantanément — et un nouveau chaque jour.
+        centaines de puzzles instantanément - et un nouveau chaque jour.
       </p>
 
       <h2 style={s.h2}>Choisir sa difficulté</h2>
@@ -121,7 +121,7 @@ export default function Page() {
         Si vous débutez, commencez par les <strong style={{ color: '#e2e8f0' }}>grilles 5×5</strong>.
         Elles se résolvent en 2 à 5 minutes et vous apprendrez toutes les techniques de base.
         Une fois à l&apos;aise, les <strong style={{ color: '#e2e8f0' }}>grilles 10×10</strong> offrent
-        un beau défi intermédiaire — 10 à 20 minutes pour les plus difficiles.
+        un beau défi intermédiaire - 10 à 20 minutes pour les plus difficiles.
         Les <strong style={{ color: '#e2e8f0' }}>grilles 15×15</strong> sont réservées aux joueurs
         expérimentés : elles demandent une combinaison de toutes les techniques avancées.
       </p>
