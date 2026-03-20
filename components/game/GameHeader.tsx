@@ -1,10 +1,13 @@
 'use client';
+import { getTranslations } from '@/i18n';
+import type { Locale } from '@/i18n/config';
 
 interface GameHeaderProps {
   puzzleName: string;
   seconds: number;
   progress: number; // 0-100
   errors: number;
+  locale?: Locale;
 }
 
 function formatTime(s: number): string {
@@ -13,7 +16,8 @@ function formatTime(s: number): string {
   return `${m}:${sec.toString().padStart(2, '0')}`;
 }
 
-export function GameHeader({ puzzleName, seconds, progress, errors }: GameHeaderProps) {
+export function GameHeader({ puzzleName, seconds, progress, errors, locale = 'fr' }: GameHeaderProps) {
+  const t = getTranslations(locale);
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between">
@@ -26,7 +30,7 @@ export function GameHeader({ puzzleName, seconds, progress, errors }: GameHeader
           </span>
           {errors > 0 && (
             <span style={{ color: '#ff6b6b' }}>
-              {errors} erreur{errors > 1 ? 's' : ''}
+              {t.game.errorsCount(errors)}
             </span>
           )}
         </div>

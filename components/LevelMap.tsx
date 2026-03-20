@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { type LevelEntry, getUserCurrentLevel } from '@/lib/levels';
 import { SignUpBanner } from '@/components/SignUpBanner';
+import type { Locale } from '@/i18n/config';
 
 interface LevelMapLabels {
   myProgress: string;
@@ -17,6 +18,7 @@ interface LevelMapProps {
   completedLevelIndices: number[];  // 0-indexed: [0, 1, 2] = levels 1,2,3 done
   isAuthenticated: boolean;
   labels?: LevelMapLabels;
+  locale?: Locale;
 }
 
 const DEFAULT_LABELS: LevelMapLabels = {
@@ -27,7 +29,7 @@ const DEFAULT_LABELS: LevelMapLabels = {
   play: 'Jouer',
 };
 
-export function LevelMap({ levels, completedLevelIndices, isAuthenticated, labels }: LevelMapProps) {
+export function LevelMap({ levels, completedLevelIndices, isAuthenticated, labels, locale = 'fr' }: LevelMapProps) {
   const L = labels ?? DEFAULT_LABELS;
   const router = useRouter();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -237,7 +239,7 @@ export function LevelMap({ levels, completedLevelIndices, isAuthenticated, label
       </div>
 
       {/* Sign-up incentive for non-auth users */}
-      {!isAuthenticated && <SignUpBanner completedCount={completed.length} />}
+      {!isAuthenticated && <SignUpBanner completedCount={completed.length} locale={locale} />}
 
       {/* CTA button */}
       <button

@@ -1,18 +1,20 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { getPuzzleBySlug, getAllPuzzleSlugs, isPuzzleInCatalog, communityRowToPuzzle } from '@/lib/puzzles';
 import { getDailyPuzzleSlug } from '@/lib/utils/daily';
 import { DailyPuzzleClient } from '@/components/game/DailyPuzzleClient';
 import { createClient } from '@/lib/supabase/server';
 import { CreatedBanner } from '@/components/CreatedBanner';
+import { getTranslations } from '@/i18n';
+import type { Locale } from '@/i18n/config';
 import type { Puzzle } from '@/types/puzzle';
 
 async function loadPuzzle(slug: string): Promise<Puzzle | null> {
   if (isPuzzleInCatalog(slug)) {
     return getPuzzleBySlug(slug);
   }
-  // Try community puzzles in Supabase
   const supabase = await createClient();
   const { data } = await supabase
     .from('puzzles')
@@ -39,20 +41,19 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const puzzle = await loadPuzzle(slug);
+  const [puzzle, h] = await Promise.all([loadPuzzle(slug), headers()]);
   if (!puzzle) return { title: 'Puzzle introuvable' };
 
+  const locale = (h.get('x-locale') || 'fr') as Locale;
+  const t = getTranslations(locale);
+
   return {
-    title: `${puzzle.name} - Nonogramme ${puzzle.size}×${puzzle.size}`,
-    description: `Jouez au nonogramme "${puzzle.name}" - ${puzzle.difficulty}, ${puzzle.size}×${puzzle.size}. Révèle l'image cachée gratuitement.`,
-    keywords: [
-      'nonogramme', 'picross', 'logimage', puzzle.name,
-      `nonogramme ${puzzle.size}x${puzzle.size}`,
-      ...puzzle.meta.tags,
-    ],
+    title: t.seo.puzzleTitle(puzzle.name, puzzle.size),
+    description: t.seo.puzzleDescription(puzzle.name, t.difficulty[puzzle.difficulty as keyof typeof t.difficulty] ?? puzzle.difficulty, puzzle.size),
+    keywords: ['nonogramme', 'picross', 'logimage', puzzle.name, `nonogramme ${puzzle.size}x${puzzle.size}`, ...puzzle.meta.tags],
     openGraph: {
-      title: `${puzzle.name} - Nonogramme ${puzzle.size}×${puzzle.size}`,
-      description: `Puzzle de logique gratuit - ${puzzle.difficulty}`,
+      title: t.seo.puzzleTitle(puzzle.name, puzzle.size),
+      description: `${puzzle.name} — ${puzzle.size}×${puzzle.size}`,
     },
     alternates: { canonical: `https://nonogramme.com/puzzle/${slug}` },
   };
@@ -65,7 +66,10 @@ export default async function PuzzlePage({
   params: Promise<{ slug: string }>;
   searchParams: Promise<{ level?: string; created?: string }>;
 }) {
-  const [{ slug }, sp] = await Promise.all([params, searchParams]);
+  const [{ slug }, sp, h] = await Promise.all([params, searchParams, headers()]);
+  const locale = (h.get('x-locale') || 'fr') as Locale;
+  const t = getTranslations(locale);
+
   const levelNumber = sp.level ? parseInt(sp.level) : undefined;
   const justCreated = sp.created === 'true';
 
@@ -74,6 +78,7 @@ export default async function PuzzlePage({
   if (!puzzle) notFound();
 
   const isDaily = getDailyPuzzleSlug(new Date(), allSlugs) === slug;
+  const backLabel = levelNumber ? `← ${t.game.backToProgress}` : `← ${t.game.allPuzzles}`;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -81,10 +86,10 @@ export default async function PuzzlePage({
         color: '#8892a4', fontSize: '0.8rem', textDecoration: 'none',
         display: 'inline-flex', alignItems: 'center', gap: '0.25rem',
       }}>
-        {levelNumber ? '← Retour à la progression' : '← Accueil'}
+        {backLabel}
       </Link>
       {justCreated && <CreatedBanner slug={slug} />}
-      <DailyPuzzleClient puzzle={puzzle} isDaily={isDaily} levelNumber={levelNumber} />
+      <DailyPuzzleClient puzzle={puzzle} isDaily={isDaily} levelNumber={levelNumber} locale={locale} />
     </div>
   );
 }

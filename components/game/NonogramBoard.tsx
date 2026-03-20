@@ -3,16 +3,20 @@ import React, { useState, useCallback, useRef, useEffect } from 'react';
 import type { CellState, Tool, Puzzle } from '@/types/puzzle';
 import { calculateScore } from '@/lib/utils/xp';
 import { checkSolution, getCompletedRows, getCompletedCols } from '@/lib/game/validator';
+import { getTranslations } from '@/i18n';
+import type { Locale } from '@/i18n/config';
 import { Toolbar } from './Toolbar';
 import { GameHeader } from './GameHeader';
 
 interface NonogramBoardProps {
   puzzle: Puzzle;
   onComplete: (score: number, time: number, errors: number, hintsUsed: number) => void;
+  locale?: Locale;
 }
 
-export function NonogramBoard({ puzzle, onComplete }: NonogramBoardProps) {
+export function NonogramBoard({ puzzle, onComplete, locale = 'fr' }: NonogramBoardProps) {
   const n = puzzle.size;
+  const t = getTranslations(locale);
 
   const [grid, setGrid] = useState<CellState[][]>(
     () => Array.from({ length: n }, () => Array(n).fill(0) as CellState[])
@@ -161,6 +165,7 @@ export function NonogramBoard({ puzzle, onComplete }: NonogramBoardProps) {
           seconds={seconds}
           progress={progress}
           errors={errors}
+          locale={locale}
         />
       </div>
 
@@ -260,12 +265,13 @@ export function NonogramBoard({ puzzle, onComplete }: NonogramBoardProps) {
           onToolChange={setTool}
           hints={hints}
           onHint={giveHint}
+          locale={locale}
         />
       )}
 
       {isComplete && (
         <p className="text-sm text-center" style={{ color: '#4ecdc4' }}>
-          Puzzle terminé !
+          {t.game.finished}
         </p>
       )}
     </div>

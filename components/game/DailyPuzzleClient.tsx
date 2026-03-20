@@ -69,7 +69,7 @@ export function DailyPuzzleClient({ puzzle, isDaily = false, levelNumber, locale
 
   return (
     <div className="flex flex-col gap-4">
-      <NonogramBoard puzzle={puzzle} onComplete={handleComplete} />
+      <NonogramBoard puzzle={puzzle} onComplete={handleComplete} locale={locale} />
       {winData && (
         <WinScreen
           puzzleName={puzzle.name}

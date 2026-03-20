@@ -7,6 +7,8 @@ export const en: Translations = {
     login: 'Login',
     blog: 'Blog',
     howToPlay: 'How to play',
+    community: 'Community',
+    create: 'Create',
   },
   home: {
     tagline: 'Reveal hidden drawings by solving logic puzzles',
@@ -27,6 +29,11 @@ export const en: Translations = {
     levelShort: 'Lv.',
     playLevel: 'Play level',
     rankOrdinal: (n: number) => `#${n}`,
+    completedLevels: (n: number) => `🎉 ${n} level${n > 1 ? 's' : ''} completed!`,
+    saveProgress: 'Create a free account to save your progress and never lose it.',
+    continueWithGoogle: 'Continue with Google',
+    continueWithDiscord: 'Continue with Discord',
+    close: 'Close',
   },
   game: {
     fill: 'Fill',
@@ -37,6 +44,8 @@ export const en: Translations = {
     progress: 'Progress',
     allPuzzles: 'All puzzles',
     backToProgress: 'Back to progress',
+    errorsCount: (n: number) => `${n} error${n > 1 ? 's' : ''}`,
+    finished: 'Puzzle complete!',
   },
   win: {
     title: 'Puzzle solved!',

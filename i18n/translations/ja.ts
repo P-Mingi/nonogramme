@@ -7,6 +7,8 @@ export const ja: Translations = {
     login: 'ログイン',
     blog: 'ブログ',
     howToPlay: '遊び方',
+    community: 'コミュニティ',
+    create: '作成',
   },
   home: {
     tagline: 'ロジックパズルを解いて隠された絵を発見しよう',
@@ -27,6 +29,11 @@ export const ja: Translations = {
     levelShort: 'Lv.',
     playLevel: 'レベルをプレイ',
     rankOrdinal: (n: number) => `${n}位`,
+    completedLevels: (n: number) => `🎉 ${n}レベルクリア！`,
+    saveProgress: 'アカウントを作成して進捗を保存しよう。',
+    continueWithGoogle: 'Googleで続ける',
+    continueWithDiscord: 'Discordで続ける',
+    close: '閉じる',
   },
   game: {
     fill: '塗りつぶす',
@@ -37,6 +44,8 @@ export const ja: Translations = {
     progress: '進捗',
     allPuzzles: '全パズル',
     backToProgress: '進捗に戻る',
+    errorsCount: (n: number) => `${n}エラー`,
+    finished: 'パズル完成！',
   },
   win: {
     title: 'パズル完成！',

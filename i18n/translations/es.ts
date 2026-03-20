@@ -7,6 +7,8 @@ export const es: Translations = {
     login: 'Iniciar sesión',
     blog: 'Blog',
     howToPlay: 'Cómo jugar',
+    community: 'Comunidad',
+    create: 'Crear',
   },
   home: {
     tagline: 'Revela dibujos ocultos resolviendo puzzles de lógica',
@@ -27,6 +29,11 @@ export const es: Translations = {
     levelShort: 'Niv.',
     playLevel: 'Jugar nivel',
     rankOrdinal: (n: number) => `#${n}`,
+    completedLevels: (n: number) => `🎉 ¡${n} nivel${n > 1 ? 'es' : ''} completado${n > 1 ? 's' : ''}!`,
+    saveProgress: 'Crea una cuenta gratuita para guardar tu progreso y no perderlo nunca.',
+    continueWithGoogle: 'Continuar con Google',
+    continueWithDiscord: 'Continuar con Discord',
+    close: 'Cerrar',
   },
   game: {
     fill: 'Rellenar',
@@ -37,6 +44,8 @@ export const es: Translations = {
     progress: 'Progreso',
     allPuzzles: 'Todos los puzzles',
     backToProgress: 'Volver al progreso',
+    errorsCount: (n: number) => `${n} error${n > 1 ? 'es' : ''}`,
+    finished: '¡Puzzle completado!',
   },
   win: {
     title: '¡Puzzle resuelto!',

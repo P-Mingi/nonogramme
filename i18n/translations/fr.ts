@@ -5,6 +5,8 @@ export const fr = {
     login: 'Connexion',
     blog: 'Blog',
     howToPlay: 'Comment jouer',
+    community: 'Communauté',
+    create: 'Créer',
   },
   home: {
     tagline: 'Révèle des dessins cachés en résolvant des puzzles de logique',
@@ -25,6 +27,11 @@ export const fr = {
     levelShort: 'Niv.',
     playLevel: 'Jouer le niveau',
     rankOrdinal: (n: number) => n === 1 ? '1er' : `${n}e`,
+    completedLevels: (n: number) => `🎉 ${n} niveau${n > 1 ? 'x' : ''} complété${n > 1 ? 's' : ''} !`,
+    saveProgress: 'Crée un compte gratuit pour sauvegarder ta progression et ne jamais la perdre.',
+    continueWithGoogle: 'Continuer avec Google',
+    continueWithDiscord: 'Continuer avec Discord',
+    close: 'Fermer',
   },
   game: {
     fill: 'Remplir',
@@ -35,6 +42,8 @@ export const fr = {
     progress: 'Progression',
     allPuzzles: 'Tous les puzzles',
     backToProgress: 'Retour à la progression',
+    errorsCount: (n: number) => `${n} erreur${n > 1 ? 's' : ''}`,
+    finished: 'Puzzle terminé !',
   },
   win: {
     title: 'Puzzle résolu !',

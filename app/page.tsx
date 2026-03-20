@@ -238,6 +238,7 @@ export default async function HomePage() {
           completedLevelIndices={completedLevelIndices}
           isAuthenticated={!!user}
           labels={levelMapLabels}
+          locale={locale}
         />
       </section>
 

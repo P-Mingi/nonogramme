@@ -50,11 +50,11 @@ export async function DeepSpaceLayout({ children, locale = 'fr' }: Props) {
               {t.nav.leaderboard}
             </Link>
             <Link href={`${prefix}/communaute`} style={{ color: '#8892a4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 500 }}>
-              Communauté
+              {t.nav.community}
             </Link>
             {user && (
               <Link href="/create" style={{ color: '#4ecdc4', fontSize: '0.875rem', textDecoration: 'none', fontWeight: 700 }}>
-                ✏️ Créer
+                ✏️ {t.nav.create}
               </Link>
             )}
             <AuthButton user={user} displayName={displayName} />

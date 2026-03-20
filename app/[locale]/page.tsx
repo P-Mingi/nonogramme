@@ -87,6 +87,13 @@ export default async function LocaleHomePage({
 
   const username = profile?.username ?? user?.user_metadata?.user_name ?? user?.email?.split('@')[0] ?? null;
   const dailyCategoryColor = CATEGORY_COLORS[daily.category] ?? '#4ecdc4';
+  const levelMapLabels = {
+    myProgress: t.home.myProgress,
+    levels: t.home.levels,
+    levelShort: t.home.levelShort,
+    playLevel: t.home.playLevel,
+    play: t.home.play,
+  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
@@ -94,7 +101,7 @@ export default async function LocaleHomePage({
         <Logo variant="icon" theme="dark" size="md" href="" />
         {user && username ? (
           <p style={{ color: '#7aa8cc', fontSize: '0.9rem', textAlign: 'center' }}>
-            Bonjour, <span style={{ color: '#e2e8f0', fontWeight: 600 }}>{username}</span> !
+            {t.home.greeting}, <span style={{ color: '#e2e8f0', fontWeight: 600 }}>{username}</span> !
           </p>
         ) : (
           <p style={{ color: '#7aa8cc', fontSize: '0.9rem', textAlign: 'center' }}>
@@ -171,6 +178,8 @@ export default async function LocaleHomePage({
           levels={LEVELS}
           completedLevelIndices={completedLevelIndices}
           isAuthenticated={!!user}
+          labels={levelMapLabels}
+          locale={locale}
         />
       </section>
     </div>

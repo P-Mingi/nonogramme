@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { createClient } from '@/lib/supabase/client';
+import { getTranslations } from '@/i18n';
+import type { Locale } from '@/i18n/config';
 
 const GOOGLE_ICON = (
   <svg width="16" height="16" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0 }}>
@@ -27,13 +29,15 @@ async function signIn(provider: 'google' | 'discord') {
 
 interface Props {
   completedCount: number;
+  locale?: Locale;
 }
 
 const STORAGE_KEY = 'signup_banner_dismissed';
 const SHOW_AFTER = 3;
 
-export function SignUpBanner({ completedCount }: Props) {
+export function SignUpBanner({ completedCount, locale = 'fr' }: Props) {
   const [visible, setVisible] = useState(false);
+  const t = getTranslations(locale);
 
   useEffect(() => {
     if (completedCount < SHOW_AFTER) return;
@@ -58,10 +62,9 @@ export function SignUpBanner({ completedCount }: Props) {
       marginBottom: '1rem',
       position: 'relative',
     }}>
-      {/* Dismiss */}
       <button
         onClick={dismiss}
-        aria-label="Fermer"
+        aria-label={t.home.close}
         style={{
           position: 'absolute', top: '0.75rem', right: '0.75rem',
           background: 'none', border: 'none', color: '#8892a4',
@@ -71,17 +74,15 @@ export function SignUpBanner({ completedCount }: Props) {
         ✕
       </button>
 
-      {/* Text */}
       <div style={{ marginBottom: '1rem', paddingRight: '1.5rem' }}>
         <div style={{ fontWeight: 700, fontSize: '0.95rem', color: '#e2e8f0', marginBottom: '0.3rem' }}>
-          🎉 {completedCount} niveaux complétés !
+          {t.home.completedLevels(completedCount)}
         </div>
         <div style={{ fontSize: '0.8rem', color: '#8892a4', lineHeight: 1.4 }}>
-          Crée un compte gratuit pour sauvegarder ta progression et ne jamais la perdre.
+          {t.home.saveProgress}
         </div>
       </div>
 
-      {/* Buttons */}
       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
         <button
           onClick={() => signIn('google')}
@@ -92,7 +93,7 @@ export function SignUpBanner({ completedCount }: Props) {
             padding: '0.4rem 0.8rem', borderRadius: '0.375rem', cursor: 'pointer',
           }}
         >
-          {GOOGLE_ICON} Continuer avec Google
+          {GOOGLE_ICON} {t.home.continueWithGoogle}
         </button>
         <button
           onClick={() => signIn('discord')}
@@ -103,7 +104,7 @@ export function SignUpBanner({ completedCount }: Props) {
             padding: '0.4rem 0.8rem', borderRadius: '0.375rem', cursor: 'pointer',
           }}
         >
-          {DISCORD_ICON} Continuer avec Discord
+          {DISCORD_ICON} {t.home.continueWithDiscord}
         </button>
       </div>
     </div>
